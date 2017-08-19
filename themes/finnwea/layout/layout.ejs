@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+    <head>
+<%- partial('_partial/meta') %>
+    </head>
+    <body class="<%- partial('_partial/body_class').trim() %>">
+<%- partial('_partial/header') %>
+<%- body %>
+<%- partial('_partial/footer') %>
+    </body>
+</html>

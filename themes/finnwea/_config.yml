@@ -1,0 +1,4 @@
+feed:
+  title: RSS
+  type: atom
+  path: atom.xml

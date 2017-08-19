@@ -1,0 +1,33 @@
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/dist/img/favicon.png" rel="shortcut icon">
+        <link rel="alternate" type="application/rss+xml" title="<%= theme.feed.title %>" href="<%= config.root %><%= theme.feed.path %>">
+        <meta name="language" content="<%= config.language_full %>">
+        <meta name="author" content="<%= config.author %>">
+        <meta name="web_author" content="<%= config.author %>">
+        <meta name="designer" content="<%= config.author %>">
+        <meta name="publisher" content="<%= config.author %>">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="7 days">
+        <meta name="distribution" content="web">
+        <meta name="copyright" content="Copyright 2016 Tijme Gommers. All rights reserved.">
+        <meta name="distribution" content="global">
+        <meta name="format-detection" content="telephone=yes"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <title><%- partial('_partial/meta_title').trim() %></title>
+        <meta name="description" content="<%- partial('_partial/meta_description').trim() %>">
+        <meta property="og:title" content="<%- partial('_partial/meta_title').trim() %>">
+        <meta property="og:type" content="<% if (is_post()) { %>article<% } else { %>website<% } %>">
+        <meta property="og:url" content="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
+        <meta property="og:site_name" content="<%= config.title %>">
+        <meta property="og:description" content="<%- partial('_partial/meta_description').trim() %>">
+        <% if (is_post()) { %><meta property="og:image" content="<%- partial('_partial/meta_image').trim() %>"><?php endif; ?><% } %>
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@finnwea">
+        <meta name="twitter:creator" content="@finnwea">
+        <meta name="twitter:title" content="<%- partial('_partial/meta_title').trim() %>">
+        <meta name="twitter:description" content="<%- partial('_partial/meta_description').trim() %>">
+        <% if (is_post()) { %><meta name="twitter:image" content="<%- partial('_partial/meta_image').trim() %>"><?php endif; ?><% } %>
+        <link href="https://finnwea.com/themes/finnwea/dist/css/finnwea.min.css" rel="stylesheet">

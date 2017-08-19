@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+public/
+.deploy*/
+node_modules/
+themes/finnwea/node_modules/

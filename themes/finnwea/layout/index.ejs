@@ -1,0 +1,25 @@
+<section class="container">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <ul class="articles">
+                <% page.posts.each(function(post){ %>
+                    <li>
+                        <a href="<%- url_for(post.path) %>" title="<%= post.title %>">
+                            <article class="item">
+                                <div class="item-darken">
+                                    <h1>
+                                        <%= post.title %>
+                                    </h1>
+                                    <footer>
+                                        Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time> by <?php echo article_author('real_name'); ?>.
+                                    </footer>
+                                </div>
+                                <img class="background" src="<?= article_custom_field('header'); ?>" />
+                            </article>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</section>
