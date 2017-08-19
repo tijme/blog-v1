@@ -7,14 +7,12 @@
                         <a href="<%- url_for(post.path) %>" title="<%= post.title %>">
                             <article class="item">
                                 <div class="item-darken">
-                                    <h1>
-                                        <%= post.title %>
-                                    </h1>
+                                    <h1><%= post.title %></h1>
                                     <footer>
-                                        Posted <time datetime="<?php echo date(DATE_W3C, article_time()); ?>"><?php echo relative_time(article_time()); ?></time> by <?php echo article_author('real_name'); ?>.
+                                        Posted on <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'dddd, MMMM Do YYYY') %></time> by <%= config.author %>.
                                     </footer>
                                 </div>
-                                <img class="background" src="<?= article_custom_field('header'); ?>" />
+                                <img class="background" src="<%= url_for(post.path) %>header.jpg" />
                             </article>
                         </a>
                     </li>

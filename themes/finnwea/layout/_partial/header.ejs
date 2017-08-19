@@ -6,15 +6,14 @@
                         <div class="row">
                             <div class="collapse navbar-collapse" id="navigation">
                                 <ul class="nav navbar-nav">
-                                    <li <% if (path.replace('index.html', '') == '') { %>class="active"<% } %>>
+                                    <li <% if (getPath() == '') { %>class="active"<% } %>>
                                         <a href="<%= config.root %>">
                                             <span class="text">Home</span>
                                         </a>
                                     </li>
-                                    <% header_pages = site.pages.filter(function(page) { return page.show_in_header }) %>
-                                    <% header_pages.forEach(function(page) { %>
+                                    <% getPages('header').forEach(function(page) { %>
                                         <li <% if (page.path == path) { %>class="active"<% } %>>
-                                            <a href="<%= config.root %><%= page.path.replace('index.html', '') %>" title="<%= page.title %>">
+                                            <a href="<%= getUrl(page.path) %>" title="<%= page.title %>">
                                                 <span class="text"><%= page.title %></span>
                                             </a>
                                         </li>
@@ -22,7 +21,7 @@
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li>
-                                        <a href="<%= config.root %><%= theme.feed.path %>" target="_blank">
+                                        <a href="<%= getUrl(theme.feed.path) %>" target="_blank">
                                             <span class="text"><%= theme.feed.title %></span>
                                         </a>
                                     </li>

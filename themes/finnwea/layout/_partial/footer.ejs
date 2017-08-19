@@ -2,13 +2,11 @@
         <footer class="footer container-fluid">
             <div class="center">
                 <p>
-                    <% footer_pages = site.pages.filter(function(page) { return page.show_in_footer }) %>
-                    <% footer_pages.forEach(function(page, index) { %>
-                        <a href="<%= config.root %><%= page.path.replace('index.html', '') %>" title="<%= page.title %>"><%= page.title %></a> <% if(footer_pages.length != index + 1) { %> - <% } %>
+                    <% getPages('footer').forEach(function(page, index) { %>
+                        <a href="<%= config.root %><%= page.path.replace('index.html', '') %>" title="<%= page.title %>"><%= page.title %></a> <% if(getPages('footer').length != index + 1) { %> - <% } %>
                     <% }); %>
                     <br>
                     &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %>. All rights reserved.
                 </p>
             </div>
         </footer>
-

@@ -3,7 +3,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/dist/img/favicon.png" rel="shortcut icon">
-        <link rel="alternate" type="application/rss+xml" title="<%= theme.feed.title %>" href="<%= config.root %><%= theme.feed.path %>">
+        <link rel="alternate" type="application/rss+xml" title="<%= theme.feed.title %>" href="<%= getUrl(theme.feed.path) %>">
         <meta name="language" content="<%= config.language_full %>">
         <meta name="author" content="<%= config.author %>">
         <meta name="web_author" content="<%= config.author %>">
@@ -16,18 +16,18 @@
         <meta name="distribution" content="global">
         <meta name="format-detection" content="telephone=yes"/>
         <meta name="HandheldFriendly" content="true"/>
-        <title><%- partial('_partial/meta_title').trim() %></title>
-        <meta name="description" content="<%- partial('_partial/meta_description').trim() %>">
-        <meta property="og:title" content="<%- partial('_partial/meta_title').trim() %>">
+        <title><%- getTrimmedPartial('_partial/meta_title') %></title>
+        <meta name="description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
+        <meta property="og:title" content="<%- getTrimmedPartial('_partial/meta_title') %>">
         <meta property="og:type" content="<% if (is_post()) { %>article<% } else { %>website<% } %>">
-        <meta property="og:url" content="<%= config.url + config.root + (page.path||'').replace('index.html', '') %>">
+        <meta property="og:url" content="<%= getUrl(page.path) %>">
         <meta property="og:site_name" content="<%= config.title %>">
-        <meta property="og:description" content="<%- partial('_partial/meta_description').trim() %>">
-        <% if (is_post()) { %><meta property="og:image" content="<%- partial('_partial/meta_image').trim() %>"><?php endif; ?><% } %>
+        <meta property="og:description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
+        <% if (is_post()) { %><meta property="og:image" content="<%- getTrimmedPartial('_partial/meta_image') %>"><?php endif; ?><% } %>
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@finnwea">
         <meta name="twitter:creator" content="@finnwea">
-        <meta name="twitter:title" content="<%- partial('_partial/meta_title').trim() %>">
-        <meta name="twitter:description" content="<%- partial('_partial/meta_description').trim() %>">
-        <% if (is_post()) { %><meta name="twitter:image" content="<%- partial('_partial/meta_image').trim() %>"><?php endif; ?><% } %>
+        <meta name="twitter:title" content="<%- getTrimmedPartial('_partial/meta_title') %>">
+        <meta name="twitter:description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
+        <% if (is_post()) { %><meta name="twitter:image" content="<%- getTrimmedPartial('_partial/meta_image') %>"><?php endif; ?><% } %>
         <link href="https://finnwea.com/themes/finnwea/dist/css/finnwea.min.css" rel="stylesheet">

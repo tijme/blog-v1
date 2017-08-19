@@ -3,7 +3,7 @@
     <head>
 <%- partial('_partial/meta') %>
     </head>
-    <body class="<%- partial('_partial/body_class').trim() %>">
+    <body class="<%- getTrimmedPartial('_partial/body_class') %>">
 <%- partial('_partial/header') %>
 <%- body %>
 <%- partial('_partial/footer') %>

@@ -85,3 +85,10 @@ theme: finnwea
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+# Plugins
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
