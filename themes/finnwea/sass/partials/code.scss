@@ -1,0 +1,88 @@
+.window {
+
+    .title-bar {
+        height: 40px;
+        background: #e9e9e9;
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .name {
+            display: block;
+            float: left;
+
+            color: #111111;
+            line-height: 40px;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+
+        .button {
+            width: 13px;
+            height: 13px;
+
+            border-radius: 14px;
+
+            float: right;
+            display: block;
+
+            margin: 13px 0px 14px 8px;
+            background: #aaaaaa;
+        }
+    }
+
+    .clearfix {
+        background: #efefef;
+    }
+
+    pre {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+
+        background: #f9f9f9;
+
+        code {
+            display: block;
+            white-space: pre;
+
+            border: 0px;
+            padding: 10px;
+
+            color: #111111;
+            font-size: 13px;
+            line-height: 18px;
+
+            .comment {
+                color: #777777; // Grey
+            }
+
+            .keyword {
+                color: #304FFE; // Blue
+            }
+
+            .title {
+                color: #F50057; // Pink
+            }
+
+            .string {
+                color: #009480; // Green
+            }
+
+            .function {
+
+                .keyword {
+                    color: #F50057; // Pink
+                }
+
+                .title {
+                    color: #F50057; // Pink
+                    font-weight: bold;
+                }
+
+                .params {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

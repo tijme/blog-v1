@@ -29,3 +29,28 @@ hexo.extend.helper.register('getTrimmedPartial', function(file) {
         .replace(/\s{2,}/g, ' ');
 
 });
+
+hexo.extend.tag.register('highlightcodefromurl', function(args) {
+    var fetch = require('node-fetch');
+
+    var titleHTML = "\
+    <div class=\"title-bar\">\
+        <div class=\"name\">" + args[1] + "</div>\
+        <div class=\"button\"></div>\
+        <div class=\"button\"></div>\
+        <div class=\"button\"></div>\
+    </div>\
+    <div class=\"clearfix\"></div>\
+    ";
+
+    return fetch(args[2])
+        .then(function(res) {
+            return res.text();
+        }).then(function(body) {
+            var highlight = require('highlight.js');
+            highlight.configure({classPrefix: ''});
+            var highlighted = highlight.highlight(args[0], body).value;
+            return "<div class=\"window\">" + titleHTML + "<pre><code class=\"hljs\">" + highlighted + "</code></pre></div>";
+        });
+
+}, {async: true});

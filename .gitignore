@@ -6,3 +6,4 @@ public/
 .deploy*/
 node_modules/
 themes/finnwea/node_modules/
+themes/finnwea/.sass-cache/

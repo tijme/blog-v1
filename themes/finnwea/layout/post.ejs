@@ -14,21 +14,24 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
-                            <h2 class="subtitle"><?= article_custom_field('subtitle'); ?></h2>
+                            <h2 class="subtitle"><%= page.subtitle %></h2>
                             <dl class="dateline">
-                                <dt>Posted </dt>
-                                <dd><time pubdate datetime="<?= date(DATE_W3C, article_time()); ?>" title="<?= date('m/d/Y', article_time()); ?> (<?= relative_time(article_time()); ?>)"><?= article_date(); ?></time></dd>
-                                <dt>by </dt>
-                                <dd rel="author"><a href="https://twitter.com/finnwea" target="_blank" rel="noopener" title="Twitter: @finnwea"><?= article_author('real_name'); ?></a></dd>
+                                <dt>Posted on</dt>
+                                &nbsp;
+                                <dd><time pubdate datetime="<%= date_xml(page.date) %>"><%= date(page.date, 'dddd, MMMM Do YYYY') %></time></dd>
+                                &nbsp;
+                                <dt>by</dt>
+                                &nbsp;
+                                <dd rel="author"><a href="https://twitter.com/finnwea" target="_blank" rel="noopener" title="Twitter: @finnwea"><%= config.author %></a></dd>
                             </dl>
                         </div>
                     </div>
                 </div>
             </header>
-            <section class="container article-content" id="article-<?php echo article_id(); ?>">
+            <section class="container article-content">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
-                        <?php echo article_markdown(); ?>
+                        <%- page.content %>
                     </div>
                 </div>
             </section>
