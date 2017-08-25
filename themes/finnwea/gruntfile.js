@@ -15,6 +15,9 @@ module.exports = function (grunt) {
      * Compile Sass to CSS
      */
     sass: {
+      options: {
+        noCache: true
+      },
       compileCore: {
         src: 'sass/bootstrap-theme.scss',
         dest: 'tmp/css/<%= pkg.name %>.css'
@@ -53,19 +56,24 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: 'sass/**/*.scss',
-        tasks: ['dist-css']
+        tasks: ['default']
       }
     },
+
+    exec: {
+      hexo_clean: {
+        cmd: 'hexo clean',
+        cwd: '../../'
+      },
+      hexo_generate: {
+        cmd: 'hexo generate',
+        cwd: '../../'
+      }
+    }
 
   });
 
   require('load-grunt-tasks')(grunt);
-
-  // grunt.registerTask('dist-js', [
-  //   'concat',
-  //   'uglify:core',
-  //   'copy:images',
-  // ]);
 
   grunt.registerTask('dist-css', [
     'sass:compileCore',
@@ -76,10 +84,10 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean:beforeDist',
     'dist-css',
-    // 'copy:fonts',
     'copy:images',
-    // 'dist-js',
-    'clean:afterDist'
+    'clean:afterDist',
+    'exec:hexo_clean',
+    'exec:hexo_generate'
   ]);
 
   grunt.registerTask('dev', [

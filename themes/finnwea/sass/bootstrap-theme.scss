@@ -75,52 +75,72 @@ body {
     height: 100%;
 
     font-size: 14px;
-    color: #333333;
+    color: #444444;
 
     overflow-y: scroll;
 }
 
 b, optgroup, strong {
-    font-weight: 500;
+    letter-spacing: 0.2px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, serif;
     color: #111111;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 38px;
+
+    @media(min-width: 992px) {
+        font-size: 48px;
+    }
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 20px;
+
+    @media(min-width: 992px) {
+        font-size: 36px;
+    }
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 28px;
+
+    @media(min-width: 992px) {
+        font-size: 32px;
+    }
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 22px;
+
+    @media(min-width: 992px) {
+        font-size: 24px;
+    }
 }
 
 ol {
     counter-reset: item;
     list-style: none;
+    padding-left: 25px;
 
-    &.table-of-contents {
-        padding-left: 0px;
-
-        li:before {
-            counter-increment: item;
-            content: counter(item)". ";
-        }
-
-        ol li:before {
-          content: counters(item,".") " ";
-        }
+    li:before {
+        counter-increment: item;
+        content: "#" counter(item) " ";
     }
+
+    ol li:before {
+        content: counters(item,".") " ";
+    }
+}
+
+.full-width {
+    width: 100%;
 }
 
 .jumbotron {
@@ -142,6 +162,14 @@ ol {
         position: absolute;
 
         object-fit: cover;
+    }
+
+    h1 {
+        font-size: 42px;
+
+        @media(min-width: 992px) {
+            font-size: 58px;
+        }
     }
 
     .jumbotron-darken {
@@ -182,6 +210,12 @@ ol {
 
                 background-position: center;
                 background-size: cover;
+
+                h1 {
+                    @media(max-width: 767px) {
+                        font-size: 26px;
+                    }
+                }
 
                 img {
                     width: 100%;

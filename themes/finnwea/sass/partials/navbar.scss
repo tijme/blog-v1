@@ -1,5 +1,5 @@
 .navbar-collapse.collapse {
-    display: block!important;
+    display: block !important;
 }
 
 .navbar-nav>li, .navbar-nav {
@@ -11,7 +11,7 @@
 }
 
 .navbar-right {
-    float: right!important;
+    float: right !important;
 }
 
 .navbar {
@@ -19,7 +19,7 @@
     background: rgba(0, 0, 0, 0.15);
 
     z-index: 50;
-    
+
     .navbar-header {
 
         button {
@@ -57,7 +57,7 @@
                 a {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    
+
                     color: #ffffff;
                     text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
 
@@ -67,7 +67,7 @@
                         background: transparent;
 
                         span {
-                            border-bottom: 1px dotted #ffffff;  
+                            border-bottom: 1px dotted #ffffff;
                         }
                     }
                 }
@@ -105,7 +105,7 @@
         }
 
         .navbar-nav {
-        
+
             li {
 
                 a {
@@ -117,7 +117,7 @@
                         background: transparent;
 
                         span {
-                            border-bottom: 1px dotted rgba(0,0,0,.75);  
+                            border-bottom: 1px dotted rgba(0,0,0,.75);
                         }
                     }
                 }
