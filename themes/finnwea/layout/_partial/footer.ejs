@@ -3,7 +3,7 @@
             <div class="center">
                 <p>
                     <% getPages('footer').forEach(function(page, index) { %>
-                        <a href="<%= config.root %><%= page.path.replace('index.html', '') %>" title="<%= page.title %>"><%= page.title %></a> <% if(getPages('footer').length != index + 1) { %> - <% } %>
+                        <a href="<%= getUrl(page.path) %>" title="<%= page.title %>"><%= page.title %></a> <% if(getPages('footer').length != index + 1) { %> - <% } %>
                     <% }); %>
                     <br>
                     &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %>. All rights reserved.

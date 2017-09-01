@@ -37,25 +37,35 @@ hexo.extend.helper.register('getTrimmedPartial', function(file) {
 hexo.extend.tag.register('customimage', function(args) {
     var classes = args[0];
     var file = args[1];
-    var alt = args[2];
+    var title = args[2];
 
-    return "<p><img class=\"" + classes + "\" src=\"" + file + "\" alt=\"" + alt + "\"></p>"
+    return "<p><img class=\"" + classes + "\" src=\"" + file + "\" alt=\"" + title + "\" title=\"" + title + "\"></p>"
+});
+
+hexo.extend.tag.register('customlightbox', function(args) {
+    var album = args[0];
+    var file = args[1];
+    var title = args[2];
+
+    return "<a href=\"" + file + "\" data-lightbox=\"" + album + "\" data-title=\"" + title + "\"><img src=\"" + file + "\" alt=\"" + title + "\" /></a>";
+});
+
+hexo.extend.tag.register('customlink', function(args) {
+    var href = args[0];
+
+    return "<a href=\"" + href + "\" target=\"_blank\" rel=\"noopener\">link</a>";
+});
+
+hexo.extend.tag.register('customcommand', function(args) {
+    var command = args[0];
+
+    return "<code class=\"command\">" + command + "</code>";
 });
 
 hexo.extend.tag.register('highlightcodefromurl', function(args) {
     var fetch = require('node-fetch');
 
-    var titleHTML = "\
-    <div class=\"title-bar hidden-xs\">\
-        <div class=\"name\">" + args[1] + "</div>\
-        <div class=\"button\"></div>\
-        <div class=\"button\"></div>\
-        <div class=\"button\"></div>\
-    </div>\
-    <div class=\"clearfix\"></div>\
-    ";
-
-    return fetch(args[2])
+    return fetch(args[1])
         .then(function(res) {
             return res.text();
         }).then(function(body) {

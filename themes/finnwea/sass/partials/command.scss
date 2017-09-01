@@ -1,0 +1,6 @@
+code.command {
+
+    &:before {
+        content: "$ ";
+    }
+}

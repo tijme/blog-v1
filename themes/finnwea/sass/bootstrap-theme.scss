@@ -4,7 +4,7 @@
 
 // Reset and dependencies
 @import "bootstrap/normalize";
-@import "bootstrap/print";
+// @import "bootstrap/print";
 // @import "bootstrap/glyphicons";
 
 // Core CSS
@@ -30,7 +30,7 @@
 // @import "bootstrap/badges";
 @import "bootstrap/jumbotron";
 @import "bootstrap/thumbnails";
-@import "bootstrap/alerts";
+// @import "bootstrap/alerts";
 // @import "bootstrap/progress-bars";
 // @import "bootstrap/media";
 // @import "bootstrap/list-group";
@@ -51,6 +51,8 @@
 
 // Libraries
 @import "partials/code";
+@import "partials/command";
+@import "partials/lightbox";
 
 // Theme
 @import "bootstrap/bootswatch";

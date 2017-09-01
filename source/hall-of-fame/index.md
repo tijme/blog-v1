@@ -23,7 +23,7 @@ order_index: 2
 				<td>Security Misconfiguration</td>
 			</tr>
 			<tr>
-				<td><a href="https://twitter.com/alexandervn" target="_blank" rel="noopener" title="Twitter">@alexandervn</a></td>
+				<td><a href="https://twitter.com/alexandervn" target="_blank" rel="noopener" title="Twitter">Alexander van Noord</a></td>
 				<td>Mon, 09 Jan 2017</td>
 				<td>Security Misconfiguration</td>
 			</tr>

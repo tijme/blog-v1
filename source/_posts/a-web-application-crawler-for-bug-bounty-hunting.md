@@ -5,7 +5,7 @@ description: Not Your Average Web Crawler is a Python module that crawls all kin
 date: 2017-04-28 22:22:20
 ---
 
-N.Y.A.W.C (<a href="https://github.com/tijme/not-your-average-web-crawler" target="_blank" rel="noopener">link</a>) is a very useful web application crawler for vulnerability scanning. It crawls every GET and POST request in the specified scope and keeps track of the request and response data. I developed N.Y.A.W.C because I needed a good open-source Python crawler that enabled me to modify requests on the go for my AngularJS CSTI scanner (<a href="https://github.com/tijme/angularjs-csti-scanner" target="_blank" rel="noopener">link</a>).
+N.Y.A.W.C ({% customlink "https://github.com/tijme/not-your-average-web-crawler" %}) is a very useful web application crawler for vulnerability scanning. It crawls every GET and POST request in the specified scope and keeps track of the request and response data. I developed N.Y.A.W.C because I needed a good open-source Python crawler that enabled me to modify requests on the go for my AngularJS CSTI scanner ({% customlink "https://github.com/tijme/angularjs-csti-scanner" %}).
 
 ### Crawling Flow
 
@@ -20,13 +20,13 @@ The crawler is multi-threaded but you don't have to worry about any of the multi
 
 {% customimage "full-width" "nyawc-flow.svg" "Not Your Average Web Crawler Flow" %}
 
-There are several hooks in the code that you can use to, for example, tamper form data before it is posted. Check the documentation (<a href="https://tijme.github.io/not-your-average-web-crawler/latest/options_callbacks.html" target="_blank" rel="noopener">link</a>) for more information about those hooks.
+There are several hooks in the code that you can use to, for example, tamper form data before it is posted. Check the documentation ({% customlink "https://tijme.github.io/not-your-average-web-crawler/latest/options_callbacks.html" %}) for more information about those hooks.
 
 ### Installation
 
 First make sure you're on Python 2.7/3.3 or higher. After that install N.Y.A.W.C via PyPi using the command below.
-`$ pip install --upgrade nyawc`
+{% customcommand "pip install --upgrade nyawc" %}
 
-The kitchen sink code sample below can be used to get the crawler up and running within a few minutes. If you like it, check out the documentation (<a href="https://tijme.github.io/not-your-average-web-crawler/" target="_blank" rel="noopener">link</a>) to get started on implementing your own exploits.
+The kitchen sink code sample below can be used to get the crawler up and running within a few minutes. If you like it, check out the documentation ({% customlink "https://tijme.github.io/not-your-average-web-crawler/" %}) to get started on implementing your own exploits.
 
-{% highlightcodefromurl python "N.Y.A.W.C extensive example" https://raw.githubusercontent.com/tijme/not-your-average-web-crawler/master/example_extensive.py %}
+{% highlightcodefromurl python https://raw.githubusercontent.com/tijme/not-your-average-web-crawler/master/example_extensive.py %}
