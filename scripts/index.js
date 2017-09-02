@@ -60,10 +60,10 @@ hexo.extend.tag.register('customlightbox', function(args) {
 
     return '\
         <div class="lightbox">\
-            <a class="lightbox-thumbnail-wrapper" id="' + file + '" href="#' + file + '">\
+            <a class="lightbox-thumbnail-wrapper" href="#' + file + '">\
                 <img class="lightbox-thumbnail" src="' + file + '" />\
             </a>\
-            <div class="lightbox-original-wrapper" href="#void">\
+            <div id="' + file + '" class="lightbox-original-wrapper" href="#void">\
                 <a class="lightbox-prev" data-album="' + album + '" data-index="' + (newLength - 1) + '" href="#prev-image"></a>\
                 <img class="lightbox-original" src="' + file + '" />\
                 <a class="lightbox-next" data-album="' + album + '" data-index="' + (newLength - 1) + '" href="#next-image"></a>\
@@ -90,7 +90,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
         var albumMatches = albumRegexp.exec(prevLinks[linkIndex]);
         var album = albumMatches[1];
 
-        if (hexo.extend.tag.customlightbox[album].length >= parseInt(linkIndex) + 1) {
+        if (hexo.extend.tag.customlightbox[album].length > parseInt(linkIndex) + 1) {
             nextId = hexo.extend.tag.customlightbox[album][parseInt(linkIndex) + 1]["file"];
         } else {
             nextId = "";

@@ -1,45 +1,5 @@
 .lightbox {
 
-    .lightbox-thumbnail-wrapper {
-
-        &:target + .lightbox-original-wrapper {
-            display: block;
-            z-index: 20;
-
-            top: 50%;
-            left: 50%;
-
-            margin-right: -50%;
-            transform: translate(-50%, -50%);
-        }
-
-        &:target + .lightbox-original-wrapper + .lightbox-close {
-            display: block;
-            z-index: 10;
-
-            top: 0;
-            left: 0;
-        }
-    }
-
-    .lightbox-close {
-        position: fixed;
-        display: none;
-
-        top: -200%;
-        left: -200%;
-
-        height: 100%;
-        width: 100%;
-
-        background-color: rgba(0, 0, 0, 0.75);
-
-        -webkit-transition: opacity .6s;
-        -moz-transition: opacity .6s;
-        -o-transition: opacity .6s;
-        transition: opacity .6s;
-    }
-
     .lightbox-original-wrapper {
         position: fixed;
         display: none;
@@ -53,6 +13,25 @@
         background: #ffffff;
         border-radius: 4px;
         padding: 4px;
+
+        &:target {
+            display: block;
+            z-index: 200;
+
+            top: 50%;
+            left: 50%;
+
+            margin-right: -50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        &:target + .lightbox-close {
+            display: block;
+            z-index: 100;
+
+            top: 0;
+            left: 0;
+        }
 
         .lightbox-prev,
         .lightbox-next {
@@ -97,5 +76,23 @@
             background: linear-gradient(to right, rgba(30,87,153,0) 60%,rgba(0,0,0,0.25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#33000000',GradientType=1 ); /* IE6-9 */
         }
+    }
+
+    .lightbox-close {
+        position: fixed;
+        display: none;
+
+        top: -200%;
+        left: -200%;
+
+        height: 100%;
+        width: 100%;
+
+        background-color: rgba(0, 0, 0, 0.75);
+
+        -webkit-transition: opacity .6s;
+        -moz-transition: opacity .6s;
+        -o-transition: opacity .6s;
+        transition: opacity .6s;
     }
 }
