@@ -1,3 +1,10 @@
+hexo.extend.helper.register('getVersion', function() {
+
+    var fs = require('fs');
+    return fs.readFileSync('.semver', 'utf8');
+
+});
+
 hexo.extend.helper.register('getPages', function(showIn) {
 
     var pages = this.site.pages;

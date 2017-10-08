@@ -1,6 +1,5 @@
 {
-  "name": "hexo-site",
-  "version": "2.0.0",
+  "name": "blog",
   "private": true,
   "hexo": {
     "version": "3.3.9"
