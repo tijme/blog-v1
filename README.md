@@ -25,4 +25,4 @@ Content can be regenerated automatically on change by running the following comm
 
 ## License
 
-Finnwea.com (blog) is open-sourced software licensed under the [GNU General Public License v3.0](https://github.com/tijme/blog/blob/master/LICENSE.md).
+Finnwea.com (blog) is open-sourced software licensed under the [MIT License](https://github.com/tijme/blog/blob/master/LICENSE.md).
