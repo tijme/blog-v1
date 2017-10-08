@@ -2,6 +2,7 @@ The MIT License (MIT)
 =====================
 
 Hexo - Copyright (c) 2012-2017 Tommy Chen
+
 Blog - Copyright (c) 2017 Tijme Gommers
 
 Permission is hereby granted, free of charge, to any person
