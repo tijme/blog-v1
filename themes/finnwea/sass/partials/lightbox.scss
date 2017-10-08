@@ -1,98 +1,147 @@
-.lightbox {
+@-webkit-keyframes LIGHTBOX_CONTROL_BUTTON {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-moz-keyframes LIGHTBOX_CONTROL_BUTTON {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-o-keyframes LIGHTBOX_CONTROL_BUTTON {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes LIGHTBOX_CONTROL_BUTTON {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
 
-    .lightbox-original-wrapper {
-        position: fixed;
+.lightbox-image {
+
+    .lightbox-thumbnail {
+        display: block;
+        max-width: 100%;
+    }
+
+    .lightbox-original {
         display: none;
+        position: fixed;
+        z-index: 120;
 
-        top: -200%;
-        left: -200%;
-
-        max-height: 90%;
         max-width: 90%;
+        max-height: 90%;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
 
         background: #ffffff;
+        border: 4px solid #ffffff;
         border-radius: 4px;
-        padding: 4px;
 
         &:target {
             display: block;
-            z-index: 200;
 
-            top: 50%;
-            left: 50%;
+            + .lightbox-action-close {
+                display: block;
 
-            margin-right: -50%;
-            transform: translate(-50%, -50%); 
-        }
-
-        &:target + .lightbox-close {
-            display: block;
-            z-index: 100;
-
-            top: 0;
-            left: 0;
-        }
-
-        .lightbox-prev,
-        .lightbox-next {
-            position: absolute;
-            display: block;
-
-            top: 0px;
-            bottom: 0px;
-
-            width: 50%;
-            height: 100%;
-
-            opacity: 0;
-
-            -webkit-transition: opacity .6s;
-            -moz-transition: opacity .6s;
-            -o-transition: opacity .6s;
-            transition: opacity .6s;
-
-            &:hover {
-                opacity: 1;
+                + .lightbox-action-prev-wrapper,
+                + .lightbox-action-next-wrapper,
+                + .lightbox-action-prev-wrapper + .lightbox-action-next-wrapper {
+                    display: block;
+                }
             }
-        }
-
-        .lightbox-prev {
-            left: 0px;
-            text-align: left;
-            cursor: w-resize;
-
-            background: -moz-linear-gradient(left, rgba(0,0,0,0.25) 0%, rgba(30,87,153,0) 40%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(left, rgba(0,0,0,0.25) 0%,rgba(30,87,153,0) 40%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to right, rgba(0,0,0,0.25) 0%,rgba(30,87,153,0) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#001e5799',GradientType=1 ); /* IE6-9 */
-        }
-
-        .lightbox-next {
-            right: 0px;
-            cursor: e-resize;
-
-            background: -moz-linear-gradient(left, rgba(30,87,153,0) 60%, rgba(0,0,0,0.25) 100%); /* FF3.6-15 */
-            background: -webkit-linear-gradient(left, rgba(30,87,153,0) 60%,rgba(0,0,0,0.25) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to right, rgba(30,87,153,0) 60%,rgba(0,0,0,0.25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#33000000',GradientType=1 ); /* IE6-9 */
         }
     }
 
-    .lightbox-close {
-        position: fixed;
+    .lightbox-action-close {
         display: none;
+        position: fixed;
+        z-index: 100;
 
-        top: -200%;
-        left: -200%;
-
-        height: 100%;
         width: 100%;
+        height: 100%;
 
-        background-color: rgba(0, 0, 0, 0.75);
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
 
-        -webkit-transition: opacity .6s;
-        -moz-transition: opacity .6s;
-        -o-transition: opacity .6s;
-        transition: opacity .6s;
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    .lightbox-action-prev-wrapper,
+    .lightbox-action-next-wrapper {
+        display: none;
+        position: fixed;
+        z-index: 110;
+
+        top: 0px;
+
+        width: 100px;
+        height: 100%;
+    
+        .lightbox-action-prev,
+        .lightbox-action-next {
+            width: 100%;
+            height: 100%;
+
+            .lightbox-action-prev-button,
+            .lightbox-action-next-button {
+                width: 40px;
+                height: 40px;
+
+                border-radius: 20px;
+                border: 4px solid rgba(255, 255, 255, 0.75);
+
+                position: absolute;
+                display: block;
+                opacity: 0;
+
+                top: 50%;
+                margin-top: -20px;
+
+                -webkit-animation: LIGHTBOX_CONTROL_BUTTON 10s 1; /* Safari 4+ */
+                -moz-animation: LIGHTBOX_CONTROL_BUTTON 10s 1; /* Fx 5+ */
+                -o-animation: LIGHTBOX_CONTROL_BUTTON 10s 1; /* Opera 12+ */
+                animation: LIGHTBOX_CONTROL_BUTTON 10s 1; /* IE 10+, Fx 29+ */
+            }
+        }
+    }
+
+    .lightbox-action-prev-wrapper {
+        left: 0px;
+        cursor: w-resize;
+
+        &:hover {
+
+            .lightbox-action-prev {
+                background: -moz-linear-gradient(left, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+        }
+
+        .lightbox-action-prev-button {
+            left: 25px;
+        }
+    }
+
+    .lightbox-action-next-wrapper {
+        right: 0px;
+        cursor: e-resize;
+
+        &:hover {
+
+            .lightbox-action-next {
+                background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+        }
+
+        .lightbox-action-next-button {
+            right: 25px;
+        }
     }
 }

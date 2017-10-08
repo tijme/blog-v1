@@ -1,6 +1,6 @@
 ---
 title: About
-description: Lorem ipsum
+description: My blog about online security, privacy, hacking, programming and much more. By the way, my name is Tijme Gommers, I&#039;m a ‎software engineer, entrepreneur and student. Programming in i.a. PHP, Java (including the Android SDK), Swift, Python and (server-side) Java/ECMA script.
 show_in_header: true
 show_in_footer: false
 order_index: 2

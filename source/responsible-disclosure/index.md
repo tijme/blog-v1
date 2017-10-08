@@ -1,6 +1,6 @@
 ---
 title: Responsible Disclosure
-description: Lorem ipsum
+description: If you discover a vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
 show_in_header: false
 show_in_footer: true
 order_index: 1

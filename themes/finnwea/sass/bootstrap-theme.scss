@@ -301,11 +301,13 @@ ol {
     .img-carousel {
         margin-bottom: 1em;
 
-        a {
+        .lightbox-image {
+            display: inline-block;
 
-            img {
+            img.lightbox-thumbnail {
                 max-height: 100px;
                 padding: 4px;
+                margin-right: 4px;
                 border: 1px solid #ddd;
                 border-radius: 3px;
                 background-color: #fff;
@@ -331,4 +333,8 @@ table {
             }
         }
     }
+}
+
+code {
+    word-break: break-all;
 }

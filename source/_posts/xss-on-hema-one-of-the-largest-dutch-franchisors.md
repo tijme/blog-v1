@@ -24,7 +24,7 @@ You can find the payload I used below. The inline CSS causes the div to overlap 
 
 Which resulted in the following HTML:
 
-<a href="/content/xss-payload.jpg" data-lightbox="image-xss-payload" data-title="Payload in HTML">![xss-payload.jpg](/content/xss-payload.jpg)</a>
+{% customlightbox "image-xss-payload" "xss-payload-in-source.jpg" "Payload in HTML" %}
 
 We can now place this piece of art in an iframe, which results in cross frame scripting.
 
@@ -50,7 +50,7 @@ So all this code basically sets a listener for messages on mouse move. Using cro
 
 Which results in:
 
-<a href="/content/alert-cookie.png" data-lightbox="image-alert-cookie" data-title="Alert on mouse over">![alert-cookie.png](/content/alert-cookie.png)</a>
+{% customlightbox "image-alert-cookie" "xss-alert-cookie.png" "Alert on mouse over" %}
 
 This is the full URL that I used:
 
@@ -84,7 +84,7 @@ Hema loads the favorites and shows the image without encoding the URL. Which mea
 
 So there you go, Stored DOM-based XSS!
 
-<a href="/content/proof-6.png" data-lightbox="image-stored-dom-based-xss-alert-cookie" data-title="Stored DOM-based XSS in hema.nl">![proof-6.png](/content/proof-6.png)</a>
+{% customlightbox "image-stored-dom-based-xss-alert-cookie" "xss-stored-proof.png" "Stored DOM-based XSS in hema.nl" %}
 
 ### Domains
 {% raw %}

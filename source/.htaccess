@@ -1,0 +1,20 @@
+Header add X-Frame-Options "deny"
+Header add X-Content-Type-Options "nosniff"
+Header add Referrer-Policy "no-referrer"
+Header add Content-Security-Policy "default-src 'none'; img-src 'self'; style-src 'self'"
+
+RewriteEngine On
+RewriteBase /
+
+# Remove www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,L]
+
+# Disable access via index.html
+RewriteRule ^index\.html$ - [L,R=404]
+RewriteRule ^(.*)/index\.html$ - [L,R=404]
+
+# Try SSL on production
+RewriteCond %{HTTP_HOST} ^finnwea.com$
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

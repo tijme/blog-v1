@@ -48,6 +48,7 @@ hexo.extend.tag.register('customlightbox', function(args) {
     var album = args[0];
     var file = args[1];
     var title = args[2];
+    var classes = args.length == 4 ? args[3] : "";
 
     if (!hexo.extend.tag.customlightbox[album]) {
         hexo.extend.tag.customlightbox[album] = [];
@@ -59,58 +60,79 @@ hexo.extend.tag.register('customlightbox', function(args) {
     });
 
     return '\
-        <div class="lightbox">\
-            <a class="lightbox-thumbnail-wrapper" href="#' + file + '">\
-                <img class="lightbox-thumbnail" src="' + file + '" />\
+        <div class="lightbox-image">\
+            <a class="lightbox-action-open" href="#' + file + '">\
+                <img src="' + file + '" class="lightbox-thumbnail ' + classes + '" />\
             </a>\
-            <div id="' + file + '" class="lightbox-original-wrapper" href="#void">\
-                <a class="lightbox-prev" data-album="' + album + '" data-index="' + (newLength - 1) + '" href="#prev-image"></a>\
-                <img class="lightbox-original" src="' + file + '" />\
-                <a class="lightbox-next" data-album="' + album + '" data-index="' + (newLength - 1) + '" href="#next-image"></a>\
-            </div>\
-            <a class="lightbox-close" href="#void"></a>\
+            <img src="' + file + '" id="' + file + '" class="lightbox-original" />\
+            <a class="lightbox-action-close" href="#void"></a>\
+            <a class="lightbox-action-prev-wrapper" href="#prev-image" data-album="' + album + '" data-index="' + (newLength - 1) + '"><div class="lightbox-action-prev"><span class="lightbox-action-prev-button"></span></div></a>\
+            <a class="lightbox-action-next-wrapper" href="#next-image" data-album="' + album + '" data-index="' + (newLength - 1) + '"><div class="lightbox-action-next"><span class="lightbox-action-next-button"></span></div></a>\
         </div>\
     ';
 });
 
 hexo.extend.filter.register('after_post_render', function(data) {
+    var prevLinks = data.content.match(/<a class="lightbox-action-prev-wrapper" href="#prev-image" data-album="([a-zA-Z0-9\-]+)" data-index="([0-9]+)"><div class="lightbox-action-prev"><span class="lightbox-action-prev-button"><\/span><\/div><\/a>/g);
+    var nextLinks = data.content.match(/<a class="lightbox-action-next-wrapper" href="#next-image" data-album="([a-zA-Z0-9\-]+)" data-index="([0-9]+)"><div class="lightbox-action-next"><span class="lightbox-action-next-button"><\/span><\/div><\/a>/g);
 
-    var prevLinks = data.content.match(/<a class="lightbox-prev" data-album="([a-zA-Z\-]+)" data-index="([0-9]+)" href="#prev-image"><\/a>/g);
-    var nextLinks = data.content.match(/<a class="lightbox-next" data-album="([a-zA-Z\-]+)" data-index="([0-9]+)" href="#next-image"><\/a>/g);
-    
     if (!prevLinks || !nextLinks) {
         return;
     }
 
-    var prevId = "";
-    var nextId = "";
+    var albums = {}
 
     for (linkIndex in prevLinks) {
-        var albumRegexp = /data-album="([a-zA-Z\-]+)"/g;
+        var albumRegexp = /data-album="([a-zA-Z0-9\-]+)"/g;
         var albumMatches = albumRegexp.exec(prevLinks[linkIndex]);
         var album = albumMatches[1];
 
-        if (hexo.extend.tag.customlightbox[album].length > parseInt(linkIndex) + 1) {
-            nextId = hexo.extend.tag.customlightbox[album][parseInt(linkIndex) + 1]["file"];
-        } else {
-            nextId = "";
+        albums[album] = {
+            prevId: "",
+            nextId: ""
+        }
+    }
+
+    var albumLinkIndex = 0;
+    var lastAlbum = "";
+
+    for (linkIndex in prevLinks) {
+        var albumRegexp = /data-album="([a-zA-Z0-9\-]+)"/g;
+        var albumMatches = albumRegexp.exec(prevLinks[linkIndex]);
+        var album = albumMatches[1];
+
+        if (album != lastAlbum) {
+            albumLinkIndex = 0;
         }
 
-        if (prevId) {
-            newElement = prevLinks[linkIndex].replace('href="#prev-image"', 'href="#' + prevId + '"');
+        if (hexo.extend.tag.customlightbox[album].length > parseInt(albumLinkIndex) + 1) {
+            albums[album].nextId = hexo.extend.tag.customlightbox[album][parseInt(albumLinkIndex) + 1]["file"];
+        } else {
+            albums[album].nextId = "";
+        }
+
+        if (albums[album].prevId) {
+            newElement = prevLinks[linkIndex].replace('href="#prev-image"', 'href="#' + albums[album].prevId + '"');
             data.content = data.content.replace(prevLinks[linkIndex], newElement);
         } else {
             data.content = data.content.replace(prevLinks[linkIndex], "");
         }
 
-        if (nextId) {
-            newElement = nextLinks[linkIndex].replace('href="#next-image"', 'href="#' + nextId + '"');
+        if (albums[album].nextId) {
+            newElement = nextLinks[linkIndex].replace('href="#next-image"', 'href="#' + albums[album].nextId + '"');
             data.content = data.content.replace(nextLinks[linkIndex], newElement);
         } else {
             data.content = data.content.replace(nextLinks[linkIndex], "");
         }
 
-        prevId = hexo.extend.tag.customlightbox[album][linkIndex]["file"];
+        if (hexo.extend.tag.customlightbox[album][albumLinkIndex]) {
+            albums[album].prevId = hexo.extend.tag.customlightbox[album][albumLinkIndex]["file"];
+        } else {
+            albums[album].prevId = ""
+        }
+
+        lastAlbum = album;
+        albumLinkIndex ++;
     }
 
 }, 9);
@@ -141,3 +163,10 @@ hexo.extend.tag.register('highlightcodefromurl', function(args) {
         });
 
 }, {async: true});
+
+hexo.extend.tag.register('highlightcode', function(args, content) {
+    var highlight = require('highlight.js');
+    highlight.configure({classPrefix: ''});
+    var highlighted = highlight.highlight(args[0], content).value;
+    return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre></div>";
+}, {ends: true});

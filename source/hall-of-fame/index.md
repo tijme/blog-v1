@@ -1,6 +1,6 @@
 ---
 title: Hall of Fame
-description: Lorem ipsum
+description: This page lists people who have had bugs accepted by Finnwea's Security Vulnerability Disclosure Program.
 show_in_header: false
 show_in_footer: true
 order_index: 2

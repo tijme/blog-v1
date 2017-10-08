@@ -70,3 +70,7 @@ html_minifier:
   enable: true
   ignore_error: false
   exclude:
+
+# HTACCESS
+include:
+  - .htaccess
