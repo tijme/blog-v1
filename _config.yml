@@ -5,13 +5,17 @@ author: Tijme Gommers
 language: en
 language_full: english
 timezone: Europe/Amsterdam
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://localhost/blog/public
-root: /blog/public/
 permalink: blog/:title/
 permalink_defaults:
+
+# Environments
+stagings:
+  production:
+    url: https://finnwea.com
+    root: /
+  development:
+    url: http://localhost/blog/public
+    root: /blog/public/
 
 # Directory
 source_dir: source

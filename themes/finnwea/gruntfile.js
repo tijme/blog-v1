@@ -66,7 +66,7 @@ module.exports = function (grunt) {
         cwd: '../../'
       },
       hexo_generate: {
-        cmd: 'hexo generate',
+        cmd: 'hexo generate --staging development',
         cwd: '../../'
       }
     }

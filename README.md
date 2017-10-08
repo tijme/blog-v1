@@ -21,7 +21,7 @@ If you will be updating assets you can use Grunt to automatically compile all as
 
 Content can be regenerated automatically on change by running the following command in the root of the project.
 
-`$ hexo generate --watch`
+`$ hexo generate --watch --staging development`
 
 ## License
 
