@@ -6,10 +6,10 @@ Header add Content-Security-Policy "default-src 'none'; img-src 'self'; style-sr
 ServerSignature Off
 DirectoryIndex index.html atom.xml
 
-<Limit GET>
-	Order deny,allow
-	Allow from all
-</Limit>
+<LimitExcept GET HEAD>
+  Order Allow,Deny
+  Deny from all
+</LimitExcept>
 
 RewriteEngine On
 RewriteBase /blog/public
