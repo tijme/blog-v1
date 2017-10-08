@@ -20,9 +20,13 @@ hexo.extend.helper.register('getPath', function() {
 
 });
 
-hexo.extend.helper.register('getUrl', function(path) {
+hexo.extend.helper.register('getUrl', function(path, remove) {
 
-    return this.url_for(path).replace('index.html', '');
+    if (!remove) {
+        remove = 'index.html';
+    }
+
+    return this.url_for(path).replace(remove, '');
 
 });
 

@@ -1,18 +1,18 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "private": true,
   "hexo": {
-    "version": "3.3.8"
+    "version": "3.3.9"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
-    "hexo-all-minifier": "^0.2.4",
-    "hexo-generator-feed": "^1.2.0",
-    "hexo-generator-index": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.0",
+    "hexo": "^3.3.9",
+    "hexo-all-minifier": "^0.3.2",
+    "hexo-generator-feed": "^1.2.2",
+    "hexo-generator-index": "^0.2.1",
+    "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-marked": "^0.3.0",
-    "hexo-renderer-stylus": "^0.3.1",
+    "hexo-renderer-stylus": "^0.3.3",
     "highlight.js": "^9.12.0",
     "node-fetch": "^1.7.2"
   }

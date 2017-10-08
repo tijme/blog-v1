@@ -74,3 +74,10 @@ html_minifier:
 # HTACCESS
 include:
   - .htaccess
+
+# RSS
+feed:
+  title: RSS
+  type: atom
+  path: feeds/rss/atom.xml
+
