@@ -12,7 +12,6 @@ DirectoryIndex index.html atom.xml
 </LimitExcept>
 
 RewriteEngine On
-RewriteBase /blog/public
 
 # Remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
