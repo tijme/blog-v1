@@ -26,10 +26,6 @@ RewriteRule ^(.*)/index\.html$ - [L,R=404]
 RewriteRule ^atom\.xml$ - [L,R=404]
 RewriteRule ^(.*)/atom\.xml$ - [L,R=404]
 
-# Allow RSS access via /feeds/rss
-#RewriteCond %{REQUEST_URI} ^/feeds/rss$ [NC]
-#RewriteRule ^(.*)$ /atom.xml?q=$1&r=$2&a=%{DOCUMENT_ROOT}&b=%{REQUEST_URI}&c=%{REQUEST_FILENAME}&d=%{PATH} [L,R=301]
-
 # Try SSL on production
 RewriteCond %{HTTP_HOST} ^finnwea.com$
 RewriteCond %{HTTPS} off
