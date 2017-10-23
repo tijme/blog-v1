@@ -12,11 +12,10 @@ DirectoryIndex index.html atom.xml
 </LimitExcept>
 
 RewriteEngine On
-RewriteBase /blog/public
 
 # Remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,L]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
 
 # Disable access via index.html
 RewriteRule ^index\.html$ - [L,R=404]
@@ -25,10 +24,6 @@ RewriteRule ^(.*)/index\.html$ - [L,R=404]
 # Block direct access to atom.xml
 RewriteRule ^atom\.xml$ - [L,R=404]
 RewriteRule ^(.*)/atom\.xml$ - [L,R=404]
-
-# Allow RSS access via /feeds/rss
-#RewriteCond %{REQUEST_URI} ^/feeds/rss$ [NC]
-#RewriteRule ^(.*)$ /atom.xml?q=$1&r=$2&a=%{DOCUMENT_ROOT}&b=%{REQUEST_URI}&c=%{REQUEST_FILENAME}&d=%{PATH} [L,R=301]
 
 # Try SSL on production
 RewriteCond %{HTTP_HOST} ^finnwea.com$
