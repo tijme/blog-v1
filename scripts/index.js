@@ -58,7 +58,7 @@ hexo.extend.tag.customlightbox = {};
 hexo.extend.tag.register('customlightbox', function(args) {
     var album = args[0];
     var file = args[1];
-    var title = args[2];
+    var title = args.length == 3 ? args[2] : "";
     var classes = args.length == 4 ? args[3] : "";
 
     if (!hexo.extend.tag.customlightbox[album]) {
@@ -144,12 +144,19 @@ hexo.extend.filter.register('after_post_render', function(data) {
 
         lastAlbum = album;
         albumLinkIndex ++;
+
+        if (!albums[album].nextId) {
+            hexo.extend.tag.customlightbox[album] = []
+        }
     }
 
 }, 9);
 
 hexo.extend.tag.register('customlink', function(args) {
     var href = args[0];
+
+    if (href[0] == "#")
+        return "<a href=\"" + href + "\">link</a>";
 
     return "<a href=\"" + href + "\" target=\"_blank\" rel=\"noopener\">link</a>";
 });
