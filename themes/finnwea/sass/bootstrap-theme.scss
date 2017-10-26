@@ -181,7 +181,7 @@ ol {
         z-index: 10;
         position: relative;
 
-        background: rgba(0, 0, 0, 0.45);
+        background: rgba(0, 0, 0, 0.55);
 
         h1 {
             color: #ffffff;
@@ -311,6 +311,17 @@ ol {
                 border: 1px solid #ddd;
                 border-radius: 3px;
                 background-color: #fff;
+            }
+        }
+
+            &.img-carousel-max {
+
+
+            .lightbox-image {
+
+                img.lightbox-thumbnail {
+                    max-height: none;
+                }
             }
         }
     }
