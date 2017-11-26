@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="{{ (url_and_folder + 'css/finnwea.min.css') | uriencode }}" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>{{ config.title }}</title>
+    <link>{{ url_and_folder | uriencode }}</link>
+    <atom:link href="{{ feed_url | uriencode }}" rel="self" type="application/rss+xml"/>
+    {% if config.feed.hub %}<atom:link href="{{ config.feed.hub | uriencode }}" rel="hub"/>{% endif %}
+    <description>{{ config.description }}</description>
+    <pubDate>{{ posts.first().updated.toDate().toUTCString() }}</pubDate>
+    {% for post in posts.toArray() %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ (url_and_folder + post.path) | uriencode }}</link>
+      <guid>{{ (url_and_folder + post.path) | uriencode }}</guid>
+      <pubDate>{{ post.date.toDate().toUTCString() }}</pubDate>
+      <media:content
+        url="{{ (url_and_folder + post.path + 'header.jpg') | uriencode }}"
+        medium="image"
+        type="image/jpeg"
+        width="1920"
+        height="450" />
+      <description>{{ post.description }}</description>
+      {% if config.feed.content and post.content %}
+      <content:encoded><![CDATA[{{ post.content | noControlChars | safe }}]]></content:encoded>
+      {% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
