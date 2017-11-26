@@ -1,0 +1,65 @@
+rss {
+	display: block;
+
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 14px;
+	color: #444444;
+
+	* {
+		display: block;
+	}
+
+	channel {
+		padding-left: 15px;
+		padding-right: 15px;
+
+		title {
+			font-family: Georgia, serif;
+			font-size: 42px;
+			color: #111111;
+
+			width: 100%;
+
+			margin-top: 15px;
+			margin-bottom: 0px;
+		}
+
+		link {
+			display: none;
+		}
+
+		description {
+			border-bottom: 1px solid #eeeeee;
+			padding-bottom: 10px;
+		}
+
+		item {
+			padding-left: 40px;
+
+			title {
+				margin-top: 30px;
+				font-size: 30px;
+			}
+
+			link {
+				display: block;
+				font-size: 12px;
+				color: #111111;
+
+				margin-top: 0px;
+				margin-bottom: 10px;
+			}
+
+			description {
+				margin-top: 0px;
+				margin-bottom: 30px;
+				padding-bottom: 0px;
+				border-bottom: none;
+			}
+		}
+
+		guid, pubDate, atom, media {
+			display: none;
+		}
+	}
+}

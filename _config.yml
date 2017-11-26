@@ -82,6 +82,8 @@ include:
 # RSS
 feed:
   title: RSS
-  type: atom
-  path: feeds/rss/atom.xml
-
+  type: rss2
+  path: feeds/rss/rss.xml
+  public_path: feeds/rss/
+  limit: false
+  content: false
