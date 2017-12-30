@@ -12,11 +12,10 @@ DirectoryIndex index.html rss.xml
 </LimitExcept>
 
 RewriteEngine On
-RewriteBase /blog/public
 
 # Remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,L]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
 
 # Disable access via index.html
 RewriteRule ^index\.html$ - [L,R=404]
@@ -30,3 +29,10 @@ RewriteRule ^(.*)/rss\.xml$ - [L,R=404]
 RewriteCond %{HTTP_HOST} ^finnwea.com$
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove multiple slashes
+RewriteCond %{THE_REQUEST} \s/+(.*?)/{2,}([^\s]*)
+RewriteRule ^ %1/%2 [R=302,L,NE]
+
+# Redirect old slugs to the new slug
+Redirect 301 /blog/xss-on-hema-nl-fr-be-gb-de-one-of-the-largest-dutch-franchisors /blog/xss-on-hema-one-of-the-largest-dutch-franchisors/
