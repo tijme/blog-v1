@@ -2,6 +2,7 @@ Header add X-Frame-Options "deny"
 Header add X-Content-Type-Options "nosniff"
 Header add Referrer-Policy "no-referrer"
 Header add Content-Security-Policy "default-src 'none'; img-src 'self'; style-src 'self'"
+Header add Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
 
 ServerSignature Off
 DirectoryIndex index.html rss.xml
