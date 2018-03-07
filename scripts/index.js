@@ -158,7 +158,7 @@ hexo.extend.tag.register('customlink', function(args) {
     if (href[0] == "#")
         return "<a href=\"" + href + "\">link</a>";
 
-    return "<a href=\"" + href + "\" target=\"_blank\" rel=\"noopener\">link</a>";
+    return "<a href=\"" + href + "\" target=\"_blank\" rel=\"noopener nofollow\">link</a>";
 });
 
 hexo.extend.tag.register('customcommand', function(args) {
