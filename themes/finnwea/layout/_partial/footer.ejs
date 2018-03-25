@@ -5,7 +5,7 @@
                     <% getPages('footer').forEach(function(page, index) { %>
                         <a href="<%= getUrl(page.path) %>" title="<%= page.title %>"><%= page.title %></a> <% if(getPages('footer').length != index + 1) { %> - <% } %>
                     <% }); %>
-                    - <a href="https://github.com/tijme/blog" target="_blank" rel="noopener">Source</a>
+                    - <a href="https://github.com/tijme/blog" target="_blank" rel="noopener nofollow">Source</a>
                     <br>
                     &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %>. Version <%= getVersion() %>. All rights reserved.
                 </p>
