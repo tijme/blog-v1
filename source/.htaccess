@@ -13,6 +13,12 @@ DirectoryIndex index.html rss.xml
   Deny from all
 </LimitExcept>
 
+# Asset expiration date
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 5 years"
+</IfModule>
+
 RewriteEngine On
 
 # Remove www
