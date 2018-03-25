@@ -1,13 +1,62 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
-<HTML><HEAD>
-<TITLE>403 Forbidden</TITLE>
-<link href="/favicon.png" rel="shortcut icon">
-</HEAD><BODY>
-<H1>Forbidden</H1>
-You don't have permission to access <!--#echo var="REQUEST_URI" --> on this server.
-<HR>
-<I><!--#echo var="HTTP_HOST" --></I>
-</BODY></HTML>
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+		<title>403 Forbidden</title>
+		<link href="/favicon.png" rel="shortcut icon">
+		<meta name="robots" content="noindex, nofollow">
+	</head>
+	<body>
+		<h1>Forbidden</h1>
+		You don't have permission to access <!--#echo var="REQUEST_URI" --> on this server.
+		<hr>
+		<i><!--#echo var="HTTP_HOST" --></i>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

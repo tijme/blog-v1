@@ -2,6 +2,7 @@
 title: Securing Amsterdam againsts a direct terrorist threat
 subtitle: A mathematical model of security for control zoning Amsterdam in case of a critical threat level.
 description: Using a mathematical model of security it is possible to calculate the position of roadblocks as (cost) efficiently as possible in case of a direct terrorist threat.
+keywords: securing, amsterdam, mathematical, security, roadblocks, efficient, terrorist, threat
 date: 2017-10-26 23:00:00
 ---
 
@@ -43,7 +44,7 @@ The pseudo code below shows how to create a graph from the GeoJSON data. When re
 
 		for coordinate in road
 			graph.add_node(coordinate)
-			
+
 			if previous_coordinate:
 				graph.add_edge(previous_coordinate, coordinate)
 

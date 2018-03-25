@@ -2,6 +2,7 @@
 title: I decided to give my blog another upgrade
 subtitle: A modern, secure and static blog that works perfectly without JavaScript
 description: A modern, secure and static blog that works perfectly without JavaScript
+keywords: blog, update, modern, secure, static, hexo, hexojs, fast, performance
 date: 2015-07-09 14:23:13
 ---
 

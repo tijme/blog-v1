@@ -1,7 +1,7 @@
 hexo.extend.helper.register('getVersion', function() {
 
     var fs = require('fs');
-    return fs.readFileSync('.semver', 'utf8');
+    return fs.readFileSync('.semver', 'utf8').trim();
 
 });
 
@@ -42,6 +42,24 @@ hexo.extend.helper.register('getTrimmedPartial', function(file) {
     return this.partial(file)
         .replace(/(\r\n|\n|\r|\t)/gm,"")
         .replace(/\s{2,}/g, ' ');
+
+});
+
+hexo.extend.helper.register('getPrerenderMetaTags', function() {
+
+    meta = '';
+
+    this.site.pages.forEach(function(page) {
+        let link = page.path.replace('/index.html', '');
+        meta += '<link rel="prerender" href="' + link + '">';
+    });
+
+    this.site.posts.forEach(function(page) {
+        let link = page.path.replace('/index.html', '');
+        meta += '<link rel="prerender" href="' + link + '">';
+    });
+
+    return meta;
 
 });
 

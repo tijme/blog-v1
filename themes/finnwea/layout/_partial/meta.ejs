@@ -18,6 +18,7 @@
         <meta name="HandheldFriendly" content="true"/>
         <title><%- getTrimmedPartial('_partial/meta_title') %></title>
         <meta name="description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
+        <meta name="keywords" content="<%- getTrimmedPartial('_partial/meta_keywords') %>">
         <meta property="og:title" content="<%- getTrimmedPartial('_partial/meta_title') %>">
         <meta property="og:type" content="<% if (is_post()) { %>article<% } else { %>website<% } %>">
         <meta property="og:url" content="<%= getUrl(page.path) %>">
@@ -30,4 +31,4 @@
         <meta name="twitter:title" content="<%- getTrimmedPartial('_partial/meta_title') %>">
         <meta name="twitter:description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
         <% if (is_post()) { %><meta name="twitter:image" content="<%- getTrimmedPartial('_partial/meta_image') %>"><% } %>
-
+        <%- getPrerenderMetaTags() %>

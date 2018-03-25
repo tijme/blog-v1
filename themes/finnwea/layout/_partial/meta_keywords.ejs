@@ -1,0 +1,5 @@
+<% if (is_post() || is_page()) { %>
+	<%= page.keywords %>
+<% } else { %>
+	<%= config.keywords %>
+<% } %>

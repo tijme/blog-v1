@@ -1,6 +1,7 @@
 ---
 title: Hall of Fame
 description: This page lists people who have had bugs accepted by Finnwea's Security Vulnerability Disclosure Program.
+keywords: hall, of, fame, hof, bugs, vulnerabilities, finnwea, disclosure, bounty
 show_in_header: false
 show_in_footer: true
 order_index: 2
@@ -18,12 +19,12 @@ order_index: 2
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="https://www.facebook.com/sam.patel.9822" target="_blank" rel="noopener" title="Facebook">Pal Patel</a></td>
+				<td>Pal Patel</td>
 				<td>Wed, 14 Jun 2017</td>
 				<td>Security Misconfiguration</td>
 			</tr>
 			<tr>
-				<td><a href="https://twitter.com/alexandervn" target="_blank" rel="noopener" title="Twitter">Alexander van Noord</a></td>
+				<td>Alexander van Noord</td>
 				<td>Mon, 09 Jan 2017</td>
 				<td>Security Misconfiguration</td>
 			</tr>

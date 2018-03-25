@@ -2,6 +2,7 @@
 title: Cross-site-scripting on one of the largest Dutch franchisors
 subtitle: Reflected and "Stored" DOM-based cross-site-scripting on hema.nl
 description: By abusing a sensitive data exposure vulnerability it is possible to steal data from a Hema user. If the user is signed in, data like the user's name and email can be stolen using cross frame scripting. Besides that, a malicious JavaScript payload can be inserted into the local storage which causes DOM-based XSS.
+keywords: xss, cross-site, scripting, hema, dutch, franchisor, dom, dom-based, sensitive, data, exposure
 date: 2016-12-20 21:14:41
 ---
 
@@ -34,7 +35,7 @@ Making it "Stored DOM-based XSS" is a bit more difficult. I divided it into two 
 
 #### Bypassing Hema's input restrictions
 
-The DOM-based XSS vulnerability contains a little bit more code. Lets use the previous payload and edit it to look like this: 
+The DOM-based XSS vulnerability contains a little bit more code. Lets use the previous payload and edit it to look like this:
 
 `data-message="message" style="width:100%;height:100%;position:absolute;top:0;left:0;" onmousemove="eval(location.hash.substring(1))"`
 
