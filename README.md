@@ -3,7 +3,7 @@
     <br/>
     <br/>
     <a href="https://github.com/tijme/blog/blob/master/LICENSE.md"><img src="https://raw.finnwea.com/shield/?firstText=License&secondText=MIT" /></a>
-    <a href="https://github.com/EditionFive/EditionFive/releases"><img src="https://raw.finnwea.com/shield/?typeKey=SemverVersion&typeValue1=blog&typeValue2=master&typeValue4=Stable"></a>
+    <a href="https://github.com/tijme/blog/releases"><img src="https://raw.finnwea.com/shield/?typeKey=SemverVersion&typeValue1=blog&typeValue2=master&typeValue4=Stable"></a>
     <br/>
     <b>My blog about cyber security, hacking, software engineering and much more</b>
     <br/>
