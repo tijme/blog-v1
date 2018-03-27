@@ -32,7 +32,7 @@ The blog can be generated automatically by running the following command in the 
 $ hexo generate --staging production
 ```
 
-It can also be used with `--staging development` if you are generating the blog for development purposes. Please note that `grunt dev` automatically (re)generates the content.
+It can also be used with `--staging development` if you are generating the blog for development purposes. Please note that `grunt dev` in the `themes/finnwea` folder automatically (re)generates the content.
 
 ## Development
 
