@@ -16,7 +16,9 @@ module.exports = function (grunt) {
      */
     sass: {
       options: {
-        noCache: true
+        noCache: true,
+        style: 'compressed',
+        precision: 2
       },
       compileCore: {
         src: 'sass/bootstrap-theme.scss',
@@ -29,7 +31,16 @@ module.exports = function (grunt) {
      */
     cssmin: {
       options: {
-        keepSpecialComments: false
+        level: {
+          1: {
+            roundingPrecision: 2,
+            specialComments: false
+          },
+          2: {
+            removeUnusedAtRules: true,
+            restructureRules: true
+          }
+        }
       },
       minifyCore: {
         src: '<%= sass.compileCore.dest %>',
@@ -38,7 +49,7 @@ module.exports = function (grunt) {
     },
 
     /**
-     * Copy fonts
+     * Copy images
      */
     copy: {
       images: {

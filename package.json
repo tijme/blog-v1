@@ -16,5 +16,8 @@
     "node-fetch": "^1.7.2",
     "nunjucks": "^3.0.0",
     "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "pretty-data": "^0.40.0"
   }
 }

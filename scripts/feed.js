@@ -13,15 +13,6 @@ var config = hexo.config.feed = assign({
   content_limit_delim: ''
 }, hexo.config.feed);
 
-var type = config.type.toLowerCase();
-
-// Check feed type
-if (type !== 'atom' && type !== 'rss2') {
-  config.type = 'atom';
-} else {
-  config.type = type;
-}
-
 // Set default feed path
 if (!config.path) {
   config.path = config.type + '.xml';
