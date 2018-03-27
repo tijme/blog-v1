@@ -1,27 +1,51 @@
-<h1 align="center">BLOG</h1>
-<p align="center">My blog about online security, privacy, hacking, programming and much more.</p>
+<p align="center">
+    <a href="https://finnwea.com/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/finnwea/source/favicon.png" alt="Logo Blog Finnwea" /></a>
+    <br/>
+    <br/>
+    <a href="https://github.com/tijme/blog/blob/master/LICENSE.md"><img src="https://raw.finnwea.com/shield/?firstText=License&secondText=MIT" /></a>
+    <a href="https://github.com/EditionFive/EditionFive/releases"><img src="https://raw.finnwea.com/shield/?typeKey=SemverVersion&typeValue1=blog&typeValue2=master&typeValue4=Stable"></a>
+    <br/>
+    <b>My blog about cyber security, hacking, software engineering and much more</b>
+    <br/>
+    <sub>Donate via <a href="https://www.paypal.me/tijmegommers/5">PayPal</a> – Built with ❤︎ by <a href="https://twitter.com/finnwea">Tijme Gommers</a></sub>
+    <br/>
+    <br/>
+</p>
+
+# Blog
 
 ## Installation
 
 Please make sure you're running [NodeJS](https://nodejs.org/en/) version 8 or higher. Then run these commands in the root of the project.
 
-`$ npm install`
+```
+$ npm install -g grunt
+$ npm install
+$ cd themes/finnwea
+$ npm install
+$ grunt
+```
 
-`$ npm install -g grunt`
+## Publishing
+
+The blog can be generated automatically by running the following command in the root of the project.
+
+```
+$ hexo generate --staging production
+```
+
+It can also be used with `--staging development` if you are generating the blog for development purposes. Please note that `grunt dev` automatically (re)generates the content.
 
 ## Development
 
 ### Assets
 
-If you will be updating assets you can use Grunt to automatically compile all assets and regenerate the content. Run this command in the `themes/yourtheme` folder.
+If you will be updating assets you can use Grunt to automatically compile all assets and regenerate the content. Please make sure you have followed the installation steps before running the commands below.
 
-`$ grunt dev`
-
-### Content
-
-Content can be regenerated automatically on change by running the following command in the root of the project.
-
-`$ hexo generate --watch --staging development`
+```
+$ cd themes/finnwea
+$ grunt dev
+```
 
 ## License
 
