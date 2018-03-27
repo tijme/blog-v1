@@ -7,6 +7,10 @@ Header add Strict-Transport-Security "max-age=63072000; includeSubDomains; prelo
 ServerSignature Off
 DirectoryIndex index.html rss.xml
 
+# Add charsets in response headers
+AddCharset UTF-8 .html
+AddCharset UTF-8 .xml
+
 # Allow only GET and HEAD
 <LimitExcept GET HEAD>
   Order Allow,Deny
