@@ -12,8 +12,6 @@
     <br/>
 </p>
 
-# Blog
-
 ## Installation
 
 Please make sure you're running [NodeJS](https://nodejs.org/en/) version 8 or higher. Then run these commands in the root of the project.
