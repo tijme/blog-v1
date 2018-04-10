@@ -49,13 +49,15 @@ hexo.extend.helper.register('getPrerenderMetaTags', function() {
 
     meta = '';
 
+    self = this;
+
     this.site.pages.forEach(function(page) {
-        let link = page.path.replace('/index.html', '');
+        let link = self.url_for(page.path).replace('/index.html', '');
         meta += '<link rel="prerender" href="' + link + '">';
     });
 
     this.site.posts.forEach(function(page) {
-        let link = page.path.replace('/index.html', '');
+        let link = self.url_for(page.path).replace('/index.html', '');
         meta += '<link rel="prerender" href="' + link + '">';
     });
 
