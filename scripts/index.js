@@ -175,8 +175,10 @@ hexo.extend.filter.register('after_post_render', function(data) {
 hexo.extend.tag.register('customlink', function(args) {
     var href = args[0];
 
-    if (href[0] == "#")
-        return "<a href=\"" + href + "\">link</a>";
+    if (href[0] == "#") {
+        var title = (args[1] ? args[1] : 'link');
+        return "<a href=\"" + href + "\">" + title + "</a>";
+    }
 
     return "<a href=\"" + href + "\" target=\"_blank\" rel=\"noopener nofollow\">link</a>";
 });
@@ -197,13 +199,17 @@ hexo.extend.tag.register('highlightcodefromurl', function(args) {
             var highlight = require('highlight.js');
             highlight.configure({classPrefix: ''});
             var highlighted = highlight.highlight(args[0], body).value;
-            return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre></div>";
+            return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre><small>Source: <a href=\"" + args[1] + "\" target=\"_blank\" rel=\"noopener nofollow\">" + args[1] + "</a></small></div>";
         });
 
 }, {async: true});
 
 hexo.extend.tag.register('highlightcode', function(args, content) {
     var highlight = require('highlight.js');
+    var hljsDefineSolidity = require('highlightjs-solidity');
+
+    hljsDefineSolidity(highlight);
+
     highlight.configure({classPrefix: ''});
     var highlighted = highlight.highlight(args[0], content).value;
     return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre></div>";

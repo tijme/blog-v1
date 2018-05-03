@@ -5,18 +5,16 @@
     "version": "3.7.1"
   },
   "dependencies": {
+    "bluebird": "^3.5.0",
+    "cheerio": "^1.0.0-rc.2",
+    "clean-css": "^4.0.9",
     "hexo": "^3.3.9",
     "hexo-generator-index": "^0.2.1",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-marked": "^0.3.0",
     "hexo-renderer-stylus": "^0.3.3",
     "highlight.js": "^9.12.0",
-    "node-fetch": "^1.7.2",
-    "nunjucks": "^3.0.0",
-    "object-assign": "^4.1.1",
-    "bluebird": "^3.5.0",
-    "cheerio": "^1.0.0-rc.2",
-    "clean-css": "^4.0.9",
+    "highlightjs-solidity": "^1.0.6",
     "html-minifier": "^3.5.15",
     "imagemin": "^5.2.2",
     "imagemin-gifsicle": "^5.1.0",
@@ -26,6 +24,9 @@
     "imagemin-pngquant": "^5.0.0",
     "imagemin-svgo": "^6.0.0",
     "minimatch": "^3.0.3",
+    "node-fetch": "^1.7.2",
+    "nunjucks": "^3.0.0",
+    "object-assign": "^4.1.1",
     "uglify-es": "^3.0.26"
   },
   "devDependencies": {

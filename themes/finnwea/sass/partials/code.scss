@@ -87,4 +87,18 @@
             }
         }
     }
+
+    small {
+        display: block;
+        width: 100%;
+
+        color: #a5a5a5;
+        text-align: center;
+
+        a {
+            color: #a5a5a5;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+    }
 }

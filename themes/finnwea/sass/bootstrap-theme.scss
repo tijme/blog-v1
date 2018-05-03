@@ -135,10 +135,12 @@ ol {
     li:before {
         counter-increment: item;
         content: "#" counter(item) " ";
+        font-weight: bold;
     }
 
     ol li:before {
         content: counters(item,".") " ";
+        font-weight: bold;
     }
 }
 
