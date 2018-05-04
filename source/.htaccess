@@ -3,6 +3,11 @@ Header add X-Content-Type-Options "nosniff"
 Header add Referrer-Policy "no-referrer"
 Header add Content-Security-Policy "default-src 'none'; img-src 'self'; style-src 'self'"
 Header add Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header add Cache-Control "public"
+
+# ETags do not work properly with GZIP
+Header unset ETag
+FileETag None
 
 ServerSignature Off
 DirectoryIndex index.html rss.xml
@@ -16,12 +21,6 @@ AddCharset UTF-8 .xml
   Order Allow,Deny
   Deny from all
 </LimitExcept>
-
-# Asset expiration date
-<IfModule mod_expires.c>
-	ExpiresActive On
-	ExpiresDefault "access plus 5 years"
-</IfModule>
 
 RewriteEngine On
 
