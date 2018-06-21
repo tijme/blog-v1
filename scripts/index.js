@@ -104,8 +104,8 @@ hexo.extend.tag.register('customlightbox', function(args) {
 });
 
 hexo.extend.filter.register('after_post_render', function(data) {
-    var prevLinks = data.content.match(/<a class="lightbox-action-prev-wrapper" href="#prev-image" data-album="([a-zA-Z0-9\-]+)" data-index="([0-9]+)"><div class="lightbox-action-prev"><span class="lightbox-action-prev-button"><\/span><\/div><\/a>/g);
-    var nextLinks = data.content.match(/<a class="lightbox-action-next-wrapper" href="#next-image" data-album="([a-zA-Z0-9\-]+)" data-index="([0-9]+)"><div class="lightbox-action-next"><span class="lightbox-action-next-button"><\/span><\/div><\/a>/g);
+    var prevLinks = data.content.match(/<a class="?lightbox-action-prev-wrapper"? href="?#prev-image"? data-album="?([a-zA-Z0-9\-]+?)"? data-index="?([0-9]+?)"?><div class="?lightbox-action-prev"?><span class="?lightbox-action-prev-button"?><\/span><\/div><\/a>/g);
+    var nextLinks = data.content.match(/<a class="?lightbox-action-next-wrapper"? href="?#next-image"? data-album="?([a-zA-Z0-9\-]+?)"? data-index="?([0-9]?)"?><div class="?lightbox-action-next"?><span class="?lightbox-action-next-button"?><\/span><\/div><\/a>/g);
 
     if (!prevLinks || !nextLinks) {
         return;
@@ -114,7 +114,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
     var albums = {}
 
     for (linkIndex in prevLinks) {
-        var albumRegexp = /data-album="([a-zA-Z0-9\-]+)"/g;
+        var albumRegexp = /data-album="?([a-zA-Z0-9\-]+)"?/g;
         var albumMatches = albumRegexp.exec(prevLinks[linkIndex]);
         var album = albumMatches[1];
 
@@ -128,7 +128,7 @@ hexo.extend.filter.register('after_post_render', function(data) {
     var lastAlbum = "";
 
     for (linkIndex in prevLinks) {
-        var albumRegexp = /data-album="([a-zA-Z0-9\-]+)"/g;
+        var albumRegexp = /data-album="?([a-zA-Z0-9\-]+)"?/g;
         var albumMatches = albumRegexp.exec(prevLinks[linkIndex]);
         var album = albumMatches[1];
 
@@ -143,14 +143,14 @@ hexo.extend.filter.register('after_post_render', function(data) {
         }
 
         if (albums[album].prevId) {
-            newElement = prevLinks[linkIndex].replace('href="#prev-image"', 'href="#' + albums[album].prevId + '"');
+            newElement = prevLinks[linkIndex].replace('href=#prev-image', 'href=#' + albums[album].prevId);
             data.content = data.content.replace(prevLinks[linkIndex], newElement);
         } else {
             data.content = data.content.replace(prevLinks[linkIndex], "");
         }
 
         if (albums[album].nextId) {
-            newElement = nextLinks[linkIndex].replace('href="#next-image"', 'href="#' + albums[album].nextId + '"');
+            newElement = nextLinks[linkIndex].replace('href=#next-image', 'href=#' + albums[album].nextId);
             data.content = data.content.replace(nextLinks[linkIndex], newElement);
         } else {
             data.content = data.content.replace(nextLinks[linkIndex], "");
@@ -186,7 +186,7 @@ hexo.extend.tag.register('customlink', function(args) {
 hexo.extend.tag.register('customcommand', function(args) {
     var command = args[0];
 
-    return "<code class=\"command\">" + command + "</code>";
+    return "<code class=command>" + command + "</code>";
 });
 
 hexo.extend.tag.register('highlightcodefromurl', function(args) {
@@ -199,7 +199,7 @@ hexo.extend.tag.register('highlightcodefromurl', function(args) {
             var highlight = require('highlight.js');
             highlight.configure({classPrefix: ''});
             var highlighted = highlight.highlight(args[0], body).value;
-            return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre><small>Source: <a href=\"" + args[1] + "\" target=\"_blank\" rel=\"noopener nofollow\">" + args[1] + "</a></small></div>";
+            return "<div class=window><pre><code class=hljs>" + highlighted + "</code></pre><small>Source: <a href=\"" + args[1] + "\" target=_blank rel=\"noopener nofollow\">" + args[1] + "</a></small></div>";
         });
 
 }, {async: true});
@@ -212,5 +212,5 @@ hexo.extend.tag.register('highlightcode', function(args, content) {
 
     highlight.configure({classPrefix: ''});
     var highlighted = highlight.highlight(args[0], content).value;
-    return "<div class=\"window\"><pre><code class=\"hljs\">" + highlighted + "</code></pre></div>";
+    return "<div class=window><pre><code class=hljs>" + highlighted + "</code></pre></div>";
 }, {ends: true});
