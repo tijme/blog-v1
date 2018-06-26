@@ -26,7 +26,7 @@ I'll first explain how one would expect the contract to work.
         1. The `shuffle` method sets `secretNumber` to a random number from 0 to 10.
 2. A l33t h4x0r finds the smart contract by syncing the chain or by searching Etherscan.
     1. He finds out that you can win money if you know `secretNumber`.
-    2. There's a pretty high change he guesses the number right after a few times, but instead he decides to do something else.
+    2. There's a pretty high chance he guesses the number right after a few times, but instead he decides to do something else.
     3. Although the `secretNumber` is a private variable, he knows you can get it by reading the contract's storage ({% customlink "https://medium.com/aigang-network/how-to-read-ethereum-contract-storage-44252c8af925" %}).
     4. So he reads the storage and finds out the `secretNumber` is 6. **Bingo!**
     5. He calls the `play` method with 6 as `number` argument (and with 1.2 ether) and expects to get the ether from the contract.
