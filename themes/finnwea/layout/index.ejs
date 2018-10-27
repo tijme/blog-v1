@@ -12,7 +12,7 @@
                                         Posted on <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'dddd, MMMM Do YYYY') %></time> by <%= config.author %>.
                                     </footer>
                                 </div>
-                                <img class="background" src="<%= url_for(post.path) %>header.jpg" />
+                                <img class="background" src="<%= url_for(post.path) %>header.jpg" alt="<%= post.title %>" />
                             </article>
                         </a>
                     </li>

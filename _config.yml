@@ -15,8 +15,8 @@ stagings:
     url: https://finnwea.com
     root: /
   development:
-    url: http://localhost
-    root: /blog/public/
+    url: http://finnwea.local/
+    root: /
 
 # Directory
 source_dir: source
