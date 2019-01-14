@@ -18,6 +18,7 @@ Please make sure you're running [NodeJS](https://nodejs.org/en/) version 8 or hi
 
 ```
 $ npm install -g grunt
+$ npm install -g hexo-cli
 $ npm install
 $ cd themes/finnwea
 $ npm install
