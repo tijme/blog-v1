@@ -2,6 +2,7 @@
 <html lang="<%= config.language %>">
     <head>
 <%- partial('_partial/meta') %>
+		<link href="<%= url_for('/css/finnwea.min.css') %>" rel="stylesheet">
     </head>
     <body class="<%- getTrimmedPartial('_partial/body_class') %>">
 <%- partial('_partial/header') %>
@@ -9,4 +10,3 @@
 <%- partial('_partial/footer') %>
     </body>
 </html>
-<link href="<%= url_for('/css/finnwea.min.css') %>" rel="stylesheet">

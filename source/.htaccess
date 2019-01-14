@@ -37,7 +37,6 @@ RewriteRule ^rss\.xml$ - [L,R=404]
 RewriteRule ^(.*)/rss\.xml$ - [L,R=404]
 
 # Try SSL on production
-RewriteCond %{HTTP_HOST} ^finnwea.com$
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
