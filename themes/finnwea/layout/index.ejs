@@ -9,7 +9,7 @@
                                 <div class="item-darken">
                                     <h1><%= post.title %></h1>
                                     <footer>
-                                        Posted on <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'dddd, MMMM Do YYYY') %></time> by <%= config.author %>.
+                                        Published on <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'dddd, MMMM Do YYYY') %></time> by <%= config.author %>.
                                     </footer>
                                 </div>
                                 <img class="background" src="<%= url_for(post.path) %>header.jpg" alt="<%= post.title %>" />

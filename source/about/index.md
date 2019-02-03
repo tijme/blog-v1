@@ -5,8 +5,9 @@ keywords: tijme, gommers, blog, security, privacy, hacking, programming, softwar
 show_in_header: true
 show_in_footer: false
 order_index: 2
+robots: index, follow
 ---
 
-**Hello World!** My name is Tijme Gommers. I'm a passionate BSc software engineer & MSc information security student from the Netherlands. During my career, I have worked on large enterprise web- and mobile applications and API's. I've also done cyber security related research, especially on web application and internet protocol level. The programming languages which I am most familiar with are **PHP**, **Java** (including the **Android SDK**), **Swift**, **C++**, **Python** and **(server-side) Java/ECMA script**. And of course I hope to learn new development techniques soon!
+My name is Tijme Gommers. I’m a professional cyber security engineer & passionate software engineer from the Netherlands. During my career, I have contributed to large enterprise web- and mobile applications using my knowledge of, among others, **PHP**, **Java** (including the **Android SDK**), **Swift**, **C++**, **Python** and **(server-side) Java/ECMA script**. Lately, I have been conducting research related to cybernetic security, especially on web application and internet protocol level. My primary occupation is my career as a red-teamer, to protect the Netherlands against cybernetic security crimes.
 
-If you can't find what you are looking for, you can check out my LinkedIn ({% customlink "https://www.linkedin.com/in/tijme" %}) for my professional profile, Twitter ({% customlink "https://twitter.com/finnwea" %}) for my thoughts on security, GitHub ({% customlink "https://github.com/tijme" %}) for my software projects or HackerOne ({% customlink "https://hackerone.com/tijme" %}) for my public disclosures (although most of them are private 😅)!
+If you can't find what you are looking for, you can check out my LinkedIn ({% customlink "https://www.linkedin.com/in/tijme" %}) for my professional profile, Twitter ({% customlink "https://twitter.com/finnwea" %}) for my thoughts on security or GitHub ({% customlink "https://github.com/tijme" %}) for my software engineering projects.

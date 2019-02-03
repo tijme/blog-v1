@@ -41,8 +41,8 @@ module.exports = function(locals) {
     url: url,
     icon: icon,
     posts: posts,
-    url_and_folder: config.url + config.root,
-    feed_url: config.url + config.root + feedConfig.public_path
+    url_and_folder: (config.url + config.root).replace(/([^:]\/)\/+/g, "$1"),
+    feed_url: (config.url + config.root + feedConfig.public_path).replace(/([^:]\/)\/+/g, "$1")
   }));
 
   return {

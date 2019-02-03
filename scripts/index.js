@@ -10,7 +10,11 @@ hexo.extend.helper.register('getPages', function(showIn) {
     var pages = this.site.pages;
 
     var filtered = pages.filter(function(page) {
-        return page["show_in_" + showIn]
+        if (showIn) {
+            return page["show_in_" + showIn];
+        } else {
+            return true;
+        }
     });
 
     var sorted = filtered.data.sort(function(a, b) {

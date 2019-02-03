@@ -4,6 +4,7 @@ subtitle: A Python-based web crawler that enables you to execute your payload ag
 description: Not Your Average Web Crawler is a Python module that crawls all kinds of web applications for requests instead of URLs. It enables you to execute your payload on all requests of a web application.
 keywords: nyawc, web, application, crawler, spider, crawling, bot, hacking, bug, bounty, open, source, python
 date: 2017-04-28 22:22:20
+robots: index, follow
 ---
 
 N.Y.A.W.C ({% customlink "https://github.com/tijme/not-your-average-web-crawler" %}) is a very useful web application crawler for vulnerability scanning. It crawls every GET and POST request in the specified scope and keeps track of the request and response data. I developed N.Y.A.W.C because I needed a good open-source Python crawler that enabled me to modify requests on the go for my AngularJS CSTI scanner ({% customlink "https://github.com/tijme/angularjs-csti-scanner" %}).

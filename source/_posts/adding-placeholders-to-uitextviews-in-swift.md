@@ -4,6 +4,7 @@ subtitle: The proper way to implement a placeholder in a UITextView in under 1 m
 description: Swift doesn't support placeholders in UITextView's natively, so here is the proper way to implement a placeholder in a UITextView. You can do it yourself in under 1 minute.
 keywords: textview, uitextview, ui, text, view, placeholder, background, grey, help, swift, ios, osx, apple
 date: 2016-12-05 14:12:32
+robots: index, follow
 ---
 
 Swift doesn't support placeholders in UITextView's natively, so here is the proper way to do it yourself in under 1 minute. You can checkout the preview GIF on Twitter ({% customlink "https://twitter.com/finnwea/status/805743064232902656" %})!

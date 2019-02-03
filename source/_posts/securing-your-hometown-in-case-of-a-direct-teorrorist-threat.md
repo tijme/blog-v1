@@ -4,6 +4,7 @@ subtitle: A mathematical model of security for control zoning Amsterdam in case 
 description: Using a mathematical model of security it is possible to calculate the position of roadblocks as (cost) efficiently as possible in case of a direct terrorist threat.
 keywords: securing, amsterdam, mathematical, security, roadblocks, efficient, terrorist, threat
 date: 2017-10-26 23:00:00
+robots: index, follow
 ---
 
 **[TL;DR]** Using a mathematical model of security it is possible to calculate the position of roadblocks as (cost) efficiently as possible in case of a direct terrorist threat. Dive to the results ({% customlink "#Results" %}) to see the roadblock placements of Amsterdam during a critical threat level.

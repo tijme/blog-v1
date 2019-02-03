@@ -5,6 +5,7 @@ keywords: hall, of, fame, hof, bugs, vulnerabilities, finnwea, disclosure, bount
 show_in_header: false
 show_in_footer: true
 order_index: 2
+robots: noindex, nofollow
 ---
 
 {% raw %}

@@ -1,13 +1,16 @@
 
         <footer class="footer container-fluid">
             <div class="center">
-                <p>
+                <p class="details">
                     <% getPages('footer').forEach(function(page, index) { %>
                         <a href="<%= getUrl(page.path) %>" title="<%= page.title %>"><%= page.title %></a> <% if(getPages('footer').length != index + 1) { %> - <% } %>
                     <% }); %>
-                    - <a href="https://github.com/tijme/blog" target="_blank" rel="noopener nofollow">Source</a>
+                    - <a href="https://github.com/tijme/blog/releases/tag/<%= getVersion() %>" target="_blank" rel="noopener nofollow">Source</a>
                     <br>
                     &copy; <%= date(new Date(), 'YYYY') %> <%= config.author %>. Version <%= getVersion() %>. All rights reserved.
+                </p>
+                <p class="made-in-holland">
+                    Made in <img src="<%= getUrl('tulip.svg') %>" alt="Made in Holland - Tulip" /> Holland
                 </p>
             </div>
         </footer>

@@ -1,5 +1,5 @@
 .footer {
-    padding-bottom: 15px;
+    padding: 15px 0px;
 
     text-align: center;
 
@@ -11,5 +11,18 @@
         text-align: center;
         font-size: 11px;
         color: #4a4a4a;
+
+        .details {
+            margin-bottom: 0px;
+        }
+
+        .made-in-holland {
+            margin-bottom: 0px;
+
+            img {
+                margin: 0px 2px;
+                height: 25px;
+            }
+        }
     }
 }
