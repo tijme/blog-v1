@@ -3,6 +3,7 @@
     <head>
 <%- partial('_partial/meta') %>
 		<link href="<%= url_for('/css/finnwea.min.' + getVersion() + '.css') %>" rel="stylesheet">
+<%- schema() %>
     </head>
     <body class="<%- getTrimmedPartial('_partial/body_class') %>">
 <%- partial('_partial/header') %>

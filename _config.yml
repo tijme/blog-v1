@@ -1,7 +1,7 @@
 # Site
 title: Tijme Gommers
-description: My blog about online security, privacy, hacking, programming and much more. By the way, my name is Tijme Gommers, I'm a ‎software engineer, entrepreneur and student. Programming in i.a. PHP, Java (including the Android SDK), Swift, Python and (server-side) Java/ECMA script.
-keywords: blog, privacy, security, hacking, programming, tijme, gommers, development, software, finnwea
+description: A blog about cybernetic security (hacking) and software engineering (programming). My name is Tijme Gommers. I’m a professional cyber security engineer & passionate software engineer from the Netherlands.
+keywords: cybernetic, security, hacking, programming, software, development, engineering, blog, tijme, gommers, finnwea
 author: Tijme Gommers
 language: en
 language_full: english
@@ -15,7 +15,7 @@ stagings:
     url: https://finnwea.com
     root: /
   development:
-    url: http://finnwea.local/
+    url: http://finnwea.local
     root: /
 
 # Directory
