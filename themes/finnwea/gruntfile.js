@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    version: grunt.file.read('../../.semver'),
 
     /**
      * Clean compiled assets
@@ -44,7 +45,7 @@ module.exports = function (grunt) {
       },
       minifyCore: {
         src: '<%= sass.compileCore.dest %>',
-        dest: 'source/css/<%= pkg.name %>.min.css'
+        dest: 'source/css/<%= pkg.name %>.min.<%= version %>.css'
       }
     },
 

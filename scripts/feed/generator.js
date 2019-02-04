@@ -36,11 +36,14 @@ module.exports = function(locals) {
   var icon;
   if (config.email) icon = gravatar(config.email);
 
+  var version = fs.readFileSync('.semver', 'utf8').trim();
+
   var xml = pd.xmlmin(template.render({
     config: config,
     url: url,
     icon: icon,
     posts: posts,
+    version: version,
     url_and_folder: (config.url + config.root).replace(/([^:]\/)\/+/g, "$1"),
     feed_url: (config.url + config.root + feedConfig.public_path).replace(/([^:]\/)\/+/g, "$1")
   }));

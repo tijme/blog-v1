@@ -7,4 +7,5 @@ public/
 node_modules/
 themes/finnwea/node_modules/
 themes/finnwea/.sass-cache/
+themes/finnwea/source/css/*.css
 tmp/
