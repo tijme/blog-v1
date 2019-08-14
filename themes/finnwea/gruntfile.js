@@ -69,6 +69,10 @@ module.exports = function (grunt) {
       sass: {
         files: 'sass/**/*.scss',
         tasks: ['default']
+      },
+      exec: {
+        files: '../../source/**/*.md',
+        tasks: ['exec:hexo_generate']
       }
     },
 

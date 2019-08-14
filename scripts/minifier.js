@@ -40,12 +40,12 @@ if (isEnabled) {
 
   // Image minifier
   hexo.config.image_minifier = Object.assign({
-    enable: true,
+    enable: false,
     interlaced: false,
     multipass: false,
-    optimizationLevel: 3,
+    optimizationLevel: 1,
     pngquant: false,
-    progressive: false,
+    progressive: true,
     silent: false
   }, hexo.config.image_minifier);
 
