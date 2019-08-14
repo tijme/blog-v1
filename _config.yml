@@ -12,7 +12,7 @@ permalink_defaults:
 # Environments
 stagings:
   production:
-    url: https://finnwea.com
+    url: https://tij.me
     root: /
   development:
     url: http://finnwea.local
