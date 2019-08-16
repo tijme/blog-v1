@@ -61,4 +61,4 @@ RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
 RewriteRule . %1/%2 [L,R=301]
 
 # Redirect old aliases
-Redirect 301 /blog/migrating-from-authy-to-raivo-otp/ /blog/migrating-your-one-time-passwords-to-raivo-otp/
+Redirect 301 /blog/migrating-from-authy-to-raivo-otp/ /blog/migrating-your-one-time-passwords-from-authy-to-raivo-otp/
