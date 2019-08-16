@@ -25,6 +25,26 @@ hexo.extend.helper.register('getPages', function(showIn) {
 
 });
 
+hexo.extend.helper.register('getPosts', function(showIn) {
+
+    var posts = this.site.posts;
+
+    var filtered = posts.filter(function(post) {
+        if (showIn) {
+            return post["show_in_" + showIn];
+        } else {
+            return true;
+        }
+    });
+
+    var sorted = filtered.data.sort(function(a, b) {
+        return b.date - a.date
+    });
+
+    return sorted;
+
+});
+
 hexo.extend.helper.register('getPath', function() {
 
     return this.path.replace('index.html', '');

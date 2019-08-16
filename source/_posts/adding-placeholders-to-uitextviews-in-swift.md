@@ -5,6 +5,7 @@ description: Swift doesn't support placeholders in UITextView's natively, so her
 keywords: textview, uitextview, ui, text, view, placeholder, background, grey, help, swift, ios, osx, apple
 date: 2016-12-05 14:12:32
 robots: index, follow
+show_in_home: true
 ---
 
 Swift doesn't support placeholders in UITextView's natively, so here is the proper way to do it yourself in under 1 minute. You can checkout the preview GIF on Twitter ({% customlink "https://twitter.com/finnwea/status/805743064232902656" %})!

@@ -5,6 +5,7 @@ description: Strange features in the Solidity programming language allow scammer
 keywords: ethereum, blockchain, smart, contract, faulty, scam, scamming, hack, steal, money, guess, the, word, game, honeypot
 date: 2018-04-30 14:12:32
 robots: index, follow
+show_in_home: true
 ---
 
 **[TL;DR]** Using a 'feature' in the Solidity programming language it is possible to create smart contracts on the Ethereum blockchain that look completely legit; however, everyone that sends money to the contract can never get it back due to that 'feature'.

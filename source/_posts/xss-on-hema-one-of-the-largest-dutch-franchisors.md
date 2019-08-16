@@ -5,6 +5,7 @@ description: By abusing a sensitive data exposure vulnerability it is possible t
 keywords: xss, cross-site, scripting, hema, dutch, franchisor, dom, dom-based, sensitive, data, exposure
 date: 2016-12-20 21:14:41
 robots: index, follow
+show_in_home: true
 ---
 
 By abusing a sensitive data exposure vulnerability ({% customlink "https://www.owasp.org/index.php/Top_10_2013-A6-Sensitive_Data_Exposure" %}) it is possible to steal data from a Hema user. If the user is signed in, data like the user's name and email can be stolen using cross frame scripting ({% customlink "https://www.owasp.org/index.php/Cross_Frame_Scripting" %}). Besides that, a malicious JavaScript payload can be inserted into the local storage which causes DOM-based XSS.

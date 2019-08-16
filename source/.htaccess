@@ -59,3 +59,6 @@ RewriteRule (.*) https://%{HTTP_HOST}/ [L,R=301]
 # Remove multiple slashes in the request URI
 RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
 RewriteRule . %1/%2 [L,R=301]
+
+# Redirect old aliases
+Redirect 301 /blog/migrating-from-authy-to-raivo-otp/ /blog/migrating-your-one-time-passwords-to-raivo-otp/

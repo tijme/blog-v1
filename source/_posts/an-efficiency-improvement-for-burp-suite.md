@@ -5,6 +5,7 @@ description: Similar Request Excluder is a Burp Suite extension that detects sim
 keywords: similar, request, excluder, burp, suite, portswigger, extension, efficiency, speed, fast, slow, remove, duplicate, urls
 date: 2018-06-21 21:32:51
 robots: index, follow
+show_in_home: true
 ---
 
 In a world where desktop applications are shifting more and more towards web applications, web application security is a rising concern. Manually testing these applications for security vulnerabilities, such as cross-site scripting and SQL injection, is infeasible; as security specialists are scarce. Automated Web Application Vulnerability Scanners, hereinafter referred to as scanners, are tools that scan web applications in an automated way, normally from the outside, to look for these security vulnerabilities.
