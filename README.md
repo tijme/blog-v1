@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://finnwea.com/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/finnwea/source/favicon.png" alt="Logo Blog Finnwea" /></a>
+    <a href="https://finnwea.com/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/custom/source/favicon.png" alt="Logo Blog Tijme" /></a>
     <br/>
     <br/>
     <a href="https://github.com/tijme/blog/blob/master/LICENSE.md"><img src="https://raw.finnwea.com/shield/?firstText=License&secondText=MIT" /></a>
@@ -20,7 +20,7 @@ Please make sure you're running [NodeJS](https://nodejs.org/en/) version 8 or hi
 $ npm install -g grunt
 $ npm install -g hexo-cli
 $ npm install
-$ cd themes/finnwea
+$ cd themes/custom
 $ npm install
 $ grunt
 ```
@@ -33,7 +33,7 @@ The blog can be generated automatically by running the following command in the 
 $ hexo generate --staging production
 ```
 
-It can also be used with `--staging development` if you are generating the blog for development purposes. Please note that `grunt dev` in the `themes/finnwea` folder automatically (re)generates the content.
+It can also be used with `--staging development` if you are generating the blog for development purposes. Please note that `grunt dev` in the `themes/custom` folder automatically (re)generates the content.
 
 ## Development
 
@@ -42,10 +42,10 @@ It can also be used with `--staging development` if you are generating the blog 
 If you will be updating assets you can use Grunt to automatically compile all assets and regenerate the content. Please make sure you have followed the installation steps before running the commands below.
 
 ```
-$ cd themes/finnwea
+$ cd themes/custom
 $ grunt dev
 ```
 
 ## License
 
-Finnwea.com (blog) is open-sourced software licensed under the [MIT License](https://github.com/tijme/blog/blob/master/LICENSE.md).
+Tij.me (blog) is open-sourced software licensed under the [MIT License](https://github.com/tijme/blog/blob/master/LICENSE.md).

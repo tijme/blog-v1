@@ -5,7 +5,7 @@ db.json
 public/
 .deploy*/
 node_modules/
-themes/finnwea/node_modules/
-themes/finnwea/.sass-cache/
-themes/finnwea/source/css/*.css
+themes/custom/node_modules/
+themes/custom/.sass-cache/
+themes/custom/source/css/*.css
 tmp/

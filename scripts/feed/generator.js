@@ -15,7 +15,7 @@ env.addFilter('noControlChars', function(str) {
   return str.replace(/[\x00-\x1F\x7F]/g, '');
 });
 
-var rss2TmplSrc = pathFn.join(__dirname, '../../themes/finnwea/rss2.xml');
+var rss2TmplSrc = pathFn.join(__dirname, '../../themes/custom/rss2.xml');
 var rss2Tmpl = nunjucks.compile(fs.readFileSync(rss2TmplSrc, 'utf8'), env);
 
 module.exports = function(locals) {

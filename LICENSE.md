@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Finnwea Blog - Copyright (c) 2017 Tijme Gommers
+Finnwea Blog - Copyright (c) 2019 Tijme Gommers
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
