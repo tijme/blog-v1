@@ -8,7 +8,7 @@ robots: index, follow
 show_in_home: true
 ---
 
-Swift doesn't support placeholders in UITextView's natively, so here is the proper way to do it yourself in under 1 minute. You can checkout the preview GIF on Twitter ({% customlink "https://twitter.com/finnwea/status/805743064232902656" %})!
+Swift doesn't support placeholders in UITextView's natively, so here is the proper way to do it yourself in under 1 minute. You can checkout the preview GIF on Twitter ({% customlink "https://twitter.com/tijme/status/805743064232902656" %})!
 
 * Add `UITextViewPlaceholder.swift` to your project
 * Set the placeholder attribute of your `UITextView` (e.g. `textView.placeholder = "Message..."`)
