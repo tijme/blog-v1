@@ -38,6 +38,7 @@ RewriteRule ^(.*)/rss\.xml$ - [L,R=404]
 # Try SSL on production
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} !^tij\.me\.development
+RewriteCond %{REQUEST_URI} !\.well-known/acme-challenge
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Remove multiple slashes in the request
