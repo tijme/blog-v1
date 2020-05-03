@@ -28,6 +28,7 @@
     "nunjucks": "~3.0.0",
     "object-assign": "~4.1.1",
     "pngquant-bin": "~3.1.1",
+    "pretty-data": "^0.40.0",
     "uglify-es": "~3.0.26"
   }
 }
