@@ -15,7 +15,7 @@ stagings:
     url: https://tij.me
     root: /
   development:
-    url: http://finnwea.local
+    url: http://tij.me.development
     root: /
 
 # Directory
