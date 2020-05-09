@@ -11,13 +11,13 @@ robots: noindex, nofollow
 I make the majority of my software available to the public and make sure it is **secure** and contains **no ads**. The sponsors and donaors below support me in the development of these projects. Thank you for your support! 👨‍💻
 
 {% raw %}
-<h4>Top Sponsors</h4>
+<h3>Top Sponsors</h3>
 <i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 <div class="table-responsive">
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th>(Nick)name</th>
 				<th>Profile</th>
 				<th>Website</th>
 			</tr>
@@ -32,19 +32,8 @@ I make the majority of my software available to the public and make sure it is *
 	</table>
 </div>
 
-<h4>Sponsors</h4>
-<i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
-<div class="table-responsive">
-	<table class="table">
-		<tbody>
-			<tr>
-				<td>
-					<i class="text-muted">Be the first!</i>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<h3>Sponsors</h3>
+<i class="text-muted">Be the first monthly tier-2 sponsor via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 
 <h4>Donators</h4>
 <i class="text-muted">One time donations via PayPal or Bunq.</i>
@@ -52,7 +41,7 @@ I make the majority of my software available to the public and make sure it is *
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th>(Nick)name</th>
 			</tr>
 		</thead>
 		<tbody>
