@@ -35,7 +35,7 @@ I make the majority of my software available to the public and make sure it is *
 <h3>Sponsors</h3>
 <i class="text-muted">Be the first monthly tier-2 sponsor via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 
-<h4>Donators</h4>
+<h3>Donators</h3>
 <i class="text-muted">One time donations via PayPal or Bunq.</i>
 <div class="table-responsive">
 	<table class="table">
