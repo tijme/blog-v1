@@ -1,0 +1,10 @@
+tr {
+	
+	td:first-child, th:first-child {
+		padding-left: 0px;
+	}
+	
+	td:last-child, th:last-child {
+		padding-right: 0px;
+	}
+}

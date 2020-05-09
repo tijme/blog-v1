@@ -1,10 +1,10 @@
 ---
 title: Hall of Fame
-description: This page lists people who have had bugs accepted by Finnwea's Security Vulnerability Disclosure Program.
-keywords: hall, of, fame, hof, bugs, vulnerabilities, finnwea, disclosure, bounty
+description: This page lists people who have had bugs accepted by the 'tij.me' Security Vulnerability Disclosure Program.
+keywords: hall, of, fame, hof, bugs, vulnerabilities, tij.me, tijme, disclosure, bounty
 show_in_header: false
 show_in_footer: true
-order_index: 2
+order_index: 3
 robots: noindex, nofollow
 ---
 
