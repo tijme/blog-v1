@@ -12,7 +12,7 @@ I make the majority of my software available to the public and make sure it is *
 
 {% raw %}
 <h4>Top Sponsors</h4>
-<i class="text-muted">Montly sponsors via GitHub ({% customlink "https://github.com/sponsors/tijme" %}).</i>
+<i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 <div class="table-responsive">
 	<table class="table">
 		<thead>
@@ -25,15 +25,15 @@ I make the majority of my software available to the public and make sure it is *
 		<tbody>
 			<tr>
 				<td>nitrohorse</td>
-				<td>GitLab ({% customlink "https://gitlab.com/users/nitrohorse" %})</td>
-				<td>nitrohorse.com ({% customlink "https://nitrohorse.com/" %})</td>
+				<td>GitLab (<a href="https://gitlab.com/users/nitrohorse" target="_blank" rel="noopener nofollow">link</a>)</td>
+				<td>nitrohorse.com (<a href="https://nitrohorse.com/" target="_blank" rel="noopener nofollow">link</a>)</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
 
 <h4>Sponsors</h4>
-<i class="text-muted">Montly sponsors via GitHub ({% customlink "https://github.com/sponsors/tijme" %}).</i>
+<i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 <div class="table-responsive">
 	<table class="table">
 		<tbody>
