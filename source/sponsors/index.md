@@ -12,7 +12,11 @@ I make the majority of my software available to the public and make sure it is *
 
 {% raw %}
 <h3>Top Sponsors</h3>
-<i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
+<!--<i class="text-muted">Monthly sponsors via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>-->
+<i class="text-muted">Be the first monthly top sponsor via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
+
+<h3>Sponsors</h3>
+<!--<i class="text-muted">Be the first monthly tier-2 sponsor via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>-->
 <div class="table-responsive">
 	<table class="table">
 		<thead>
@@ -24,16 +28,13 @@ I make the majority of my software available to the public and make sure it is *
 		</thead>
 		<tbody>
 			<tr>
-				<td>nitrohorse</td>
-				<td>GitLab (<a href="https://gitlab.com/users/nitrohorse" target="_blank" rel="noopener nofollow">link</a>)</td>
-				<td>nitrohorse.com (<a href="https://nitrohorse.com/" target="_blank" rel="noopener nofollow">link</a>)</td>
+				<td>kevinstsauveur</td>
+				<td>GitHub (<a href="https://github.com/kevinstsauveur" target="_blank" rel="noopener nofollow">link</a>)</td>
+				<td>-</td>
 			</tr>
 		</tbody>
 	</table>
 </div>
-
-<h3>Sponsors</h3>
-<i class="text-muted">Be the first monthly tier-2 sponsor via GitHub (<a href="https://github.com/sponsors/tijme" target="_blank" rel="noopener nofollow">link</a>).</i>
 
 <h3>Donators</h3>
 <i class="text-muted">One time donations via PayPal or Bunq.</i>
