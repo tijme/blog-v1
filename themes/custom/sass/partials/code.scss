@@ -54,20 +54,75 @@
             font-size: 13px;
             line-height: 18px;
 
+            .subst {
+                color: #444;
+            }
+
             .comment {
-                color: #777777; // Grey
+                color: #888888;
             }
 
-            .keyword {
-                color: #304FFE; // Blue
+            .keyword,
+            .attribute,
+            .selector-tag,
+            .meta-keyword,
+            .doctag,
+            .name {
+                font-weight: bold;
             }
 
-            .title {
-                color: #F50057; // Pink
+            .type,
+            .string,
+            .number,
+            .selector-id,
+            .selector-class,
+            .quote,
+            .template-tag,
+            .deletion {
+                color: #880000;
             }
 
-            .string {
-                color: #009480; // Green
+            .title,
+            .section {
+                color: #880000;
+                font-weight: bold;
+            }
+
+            .regexp,
+            .symbol,
+            .variable,
+            .template-variable,
+            .link,
+            .selector-attr,
+            .selector-pseudo {
+                color: #BC6060;
+            }
+
+            .literal {
+                color: #78A960;
+            }
+
+            .built_in,
+            .bullet,
+            .code,
+            .addition {
+                color: #397300;
+            }
+
+            .meta {
+                color: #1f7199;
+            }
+
+            .meta-string {
+                color: #4d99bf;
+            }
+
+            .emphasis {
+                font-style: italic;
+            }
+
+            .strong {
+                font-weight: bold;
             }
 
             .function {

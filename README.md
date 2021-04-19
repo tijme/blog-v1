@@ -17,8 +17,8 @@
 Please make sure you're running [NodeJS](https://nodejs.org/en/) version 8 or higher. Then run these commands in the root of the project.
 
 ```
-$ npm install -g grunt
-$ npm install -g hexo-cli
+$ npm install -g grunt@1.3.0
+$ npm install -g hexo-cli@3.1.0
 $ npm install
 $ cd themes/custom
 $ npm install

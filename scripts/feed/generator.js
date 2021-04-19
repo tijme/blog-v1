@@ -25,7 +25,7 @@ module.exports = function(locals) {
 
   var posts = locals.posts.sort('-date');
   posts = posts.filter(function(post) {
-    return post.draft !== true;
+    return post.draft !== true && post.show_in_home == true;
   });
 
   if (feedConfig.limit) posts = posts.limit(feedConfig.limit);

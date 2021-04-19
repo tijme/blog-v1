@@ -1,7 +1,7 @@
 The MIT License (MIT)
 =====================
 
-Blog (tij.me) - Copyright (c) 2020 Tijme Gommers
+Blog (tij.me) - Copyright (c) 2021 Tijme Gommers
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation

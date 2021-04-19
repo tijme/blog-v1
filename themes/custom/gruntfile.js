@@ -22,7 +22,7 @@ module.exports = function (grunt) {
         precision: 2
       },
       compileCore: {
-        src: 'sass/bootstrap-theme.scss',
+        src: ['sass/bootstrap-theme.scss'],
         dest: 'tmp/css/<%= pkg.name %>.css'
       }
     },
@@ -67,7 +67,7 @@ module.exports = function (grunt) {
      */
     watch: {
       sass: {
-        files: 'sass/**/*.scss',
+        files: ['sass/**/*.scss'],
         tasks: ['default']
       },
       exec: {
