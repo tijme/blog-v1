@@ -1,7 +1,7 @@
 ---
 title: Responsible Disclosure
 description: If you discover a vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
-keywords: responsible, disclosure, guidelines, contact, security, bug, bounty, report, finnwea
+keywords: responsible, disclosure, guidelines, contact, security, bug, bounty, report, tijme
 show_in_header: false
 show_in_footer: true
 order_index: 1
@@ -11,7 +11,7 @@ robots: index, follow
 We consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present. If you discover a security vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
 
 **Please do the following:**
-* E-mail your findings to security[at]finnwea[dot]com,
+* E-mail your findings to t[dot]gommers[at]outlook[dot]com,
 * Do not take advantage of the vulnerability or problem you have discovered, for example by downloading more data than necessary to demonstrate the vulnerability or deleting or modifying other people's data,
 * Do not reveal the problem to others until it has been resolved,
 * Do not use attacks on physical security, social engineering, distributed denial of service, spam or applications of third parties, and
@@ -25,8 +25,9 @@ We consider the security of our systems a top priority. But no matter how much e
 * In the public information concerning the problem reported, we will give your name as the discoverer of the problem (unless you desire otherwise).
 
 **Out of scope:**
-* DMARC
-* DKIM
-* SPF
+* Denial-of-service (DOS)
+* Domain-based Message Authentication, Reporting, and Conformance (DMARC)
+* DomainKeys Identified Mail (DKIM)
+* Sender Policy Framework (SPF)
 
 We strive to resolve all problems as quickly as possible, and we would like to play an active role in the ultimate publication on the problem after it is resolved.
