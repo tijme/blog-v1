@@ -196,6 +196,10 @@ hexo.extend.filter.register('after_post_render', function(data) {
 
 }, 9);
 
+hexo.extend.filter.register('after_render:html', function(html) {
+    return html.replace(/<meta name="generator" content="[^"]*">/, '')
+});
+
 hexo.extend.tag.register('customlink', function(args) {
     var href = args[0];
     var title = (args[1] ? args[1] : 'link');

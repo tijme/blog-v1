@@ -28,7 +28,7 @@ I make the majority of my software available to the public and make sure it is *
 		</thead>
 		<tbody>
 			<tr>
-				<td>kevinstsauveur</td>
+				<td>Kevin</td>
 				<td>GitHub (<a href="https://github.com/kevinstsauveur" target="_blank" rel="noopener nofollow">link</a>)</td>
 				<td>-</td>
 			</tr>
@@ -46,6 +46,21 @@ I make the majority of my software available to the public and make sure it is *
 			</tr>
 		</thead>
 		<tbody>
+			<tr>
+				<td>Helmar</td>
+			</tr>
+			<tr>
+				<td>Joachim</td>
+			</tr>
+			<tr>
+				<td>Chad</td>
+			</tr>
+			<tr>
+				<td>Val</td>
+			</tr>
+			<tr>
+				<td>Phi</td>
+			</tr>
 			<tr>
 				<td>Aldas</td>
 			</tr>
