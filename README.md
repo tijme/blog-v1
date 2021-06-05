@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://tij.me/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/custom/source/tulip.svg" alt="Logo Blog Tijme" width="200" fill="white" /></a>
+    <a href="https://tij.me/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/custom/source/tulip-white.svg" alt="Logo Blog Tijme" width="200"  /></a>
     <br/>
     <br/>
     <a href="https://github.com/tijme/blog/blob/master/LICENSE.md"><img src="https://raw.finnwea.com/shield/?firstText=License&secondText=MIT" /></a>
