@@ -2,29 +2,34 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="<%= getUrl('favicon.png') %>" rel="shortcut icon">
-        <link rel="alternate" type="application/rss+xml" title="<%= theme.feed.title %>" href="<%= getUrl(theme.feed.path, 'rss.xml') %>">
+        <link href="<%= getUrl('favicon.png') + '?' + getVersion() %>" rel="shortcut icon">
+        <link rel="alternate" type="application/rss+xml" title="<%= theme.feed.title + '?' + getVersion() %>" href="<%= getUrl(theme.feed.path, 'rss.xml') %>">
         <meta name="language" content="<%= config.language_full %>">
         <meta name="author" content="<%= config.author %>">
+        <meta itemprop="creator" content="<%= config.author %>">
         <meta name="web_author" content="<%= config.author %>">
         <meta name="designer" content="<%= config.author %>">
         <meta name="publisher" content="<%= config.author %>">
         <meta name="robots" content="<%= page.robots %>">
         <meta name="revisit-after" content="7 days">
         <meta name="distribution" content="web">
-        <meta name="copyright" content="Copyright 2019 Tijme Gommers. All rights reserved.">
+        <meta name="copyright" content="Copyright <%= date(new Date(), 'YYYY') %> <%= config.author %>. All rights reserved.">
         <meta name="distribution" content="global">
         <meta name="format-detection" content="telephone=yes"/>
         <meta name="HandheldFriendly" content="true"/>
         <title><%- getTrimmedPartial('_partial/meta_title') %></title>
+        <link rel="canonical" href="<%= config.url %><%= config.root %><%= getUrl(page.path) %>">
+        <meta itemprop="name" content="<%- getTrimmedPartial('_partial/meta_title') %>">
         <meta name="description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
+        <meta itemprop="description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
         <meta name="keywords" content="<%- getTrimmedPartial('_partial/meta_keywords') %>">
         <meta property="og:title" content="<%- getTrimmedPartial('_partial/meta_title') %>">
         <meta property="og:type" content="<% if (is_post()) { %>article<% } else { %>website<% } %>">
-        <meta property="og:url" content="<%= getUrl(page.path) %>">
+        <meta property="og:url" content="<%= config.url %><%= config.root %><%= getUrl(page.path) %>">
         <meta property="og:site_name" content="<%= config.title %>">
         <meta property="og:description" content="<%- getTrimmedPartial('_partial/meta_description') %>">
         <% if (is_post()) { %><meta property="og:image" content="<%- getTrimmedPartial('_partial/meta_image') %>"><% } %>
+        <% if (is_post()) { %><meta itemprop="image" content="<%- getTrimmedPartial('_partial/meta_image') %>"><% } %>
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@tijme">
         <meta name="twitter:creator" content="@tijme">

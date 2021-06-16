@@ -94,7 +94,7 @@ hexo.extend.tag.register('customimage', function(args) {
     var file = args[1];
     var title = args[2];
 
-    return "<p><img class=\"" + classes + "\" src=\"" + file + "\" alt=\"" + title + "\" title=\"" + title + "\"></p>"
+    return "<p><img itemprop=\"image\" class=\"" + classes + "\" src=\"" + file + "\" alt=\"" + title + "\" title=\"" + title + "\"></p>"
 });
 
 hexo.extend.tag.customlightbox = {};
@@ -102,7 +102,7 @@ hexo.extend.tag.customlightbox = {};
 hexo.extend.tag.register('customlightbox', function(args) {
     var album = args[0];
     var file = args[1];
-    var title = args.length == 3 ? args[2] : "";
+    var title = args[2];
     var classes = args.length == 4 ? args[3] : "";
 
     if (!hexo.extend.tag.customlightbox[album]) {
@@ -117,9 +117,9 @@ hexo.extend.tag.register('customlightbox', function(args) {
     return '\
         <div class="lightbox-image">\
             <a class="lightbox-action-open" href="#' + file + '">\
-                <img src="' + file + '" class="lightbox-thumbnail ' + classes + '" />\
+                <img itemprop="thumbnail" alt="' + title + '" src="' + file + '?thumbnail" class="lightbox-thumbnail ' + classes + '" />\
             </a>\
-            <img src="' + file + '" id="' + file + '" class="lightbox-original" />\
+            <img itemprop="image" alt="' + title + '" src="' + file + '" id="' + file + '" class="lightbox-original" />\
             <a class="lightbox-action-close" href="#void"></a>\
             <a class="lightbox-action-prev-wrapper" href="#prev-image" data-album="' + album + '" data-index="' + (newLength - 1) + '"><div class="lightbox-action-prev"><span class="lightbox-action-prev-button"></span></div></a>\
             <a class="lightbox-action-next-wrapper" href="#next-image" data-album="' + album + '" data-index="' + (newLength - 1) + '"><div class="lightbox-action-next"><span class="lightbox-action-next-button"></span></div></a>\

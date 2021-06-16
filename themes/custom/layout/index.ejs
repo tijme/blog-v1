@@ -1,18 +1,18 @@
-<section class="container">
+<section class="container" itemscope itemtype="http://schema.org/Blog">
     <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
             <ul class="articles">
                 <% getPosts('home').forEach(function(post) { %>
-                    <li>
+                    <li itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
                         <a href="<%- url_for(post.path) %>" title="<%= post.title %>">
                             <article class="item">
                                 <div class="item-darken">
                                     <h1><%= post.title %></h1>
-                                    <footer>
+                                    <footer itemprop="datePublished" content="<%= date_xml(post.date) %>">
                                         Published on <time datetime="<%= date_xml(post.date) %>"><%= date(post.date, 'dddd, MMMM Do YYYY') %></time> by <%= config.author %>.
                                     </footer>
                                 </div>
-                                <img class="background" src="<%= url_for(post.path) %>header.jpg" alt="<%= post.title %>" />
+                                <img alt="Blog post header - <%= post.title %>" class="background" src="<%= url_for(post.path) %>header.jpg" alt="<%= post.title %>" />
                             </article>
                         </a>
                     </li>

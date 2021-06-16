@@ -1,25 +1,25 @@
 
-        <article class="article">
+        <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
             <header>
                 <div class="jumbotron">
                     <div class="jumbotron-darken">
                         <div class="vertical-center">
                             <div class="container-fluid text-center">
-                                <h1 class="headline"><%= page.title %></h1>
+                                <h1 class="headline" itemprop="headline"><%= page.title %></h1>
                             </div>
                         </div>
                     </div>
-                    <img class="background" src="<%= url_for(page.path) %>header.jpg" />
+                    <img class="background" alt="Blog post header - <%= page.title %>" itemprop="image" src="<%= url_for(page.path) %>header.jpg" />
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-10 col-sm-offset-1">
-                            <h2 class="subtitle"><%= page.subtitle %></h2>
+                            <h2 class="subtitle" itemprop="description"><%= page.subtitle %></h2>
                         </div>
                     </div>
                 </div>
             </header>
-            <section class="container article-content">
+            <section class="container article-content" itemprop="articleBody">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1">
                         <%- page.content %>

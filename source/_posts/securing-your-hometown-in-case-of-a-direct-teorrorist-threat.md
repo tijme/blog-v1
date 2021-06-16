@@ -59,15 +59,15 @@ Next up is the most important part, creating the super sink (safe zone). To do t
 <div class="row img-carousel img-carousel-max">
 	<div class="col-md-4">
 		<p><strong>Figure A:</strong> Visual representation of the GeoJSON data</p>
-		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-empty.jpg" %}{% raw %}
+		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-empty.jpg" "Graph of Amsterdam (empty)" %}{% raw %}
 	</div>
 	<div class="col-md-4">
 		<p><strong>Figure B:</strong> The super sink that represents the safe zone</p>
-		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-super-sink.jpg" %}{% raw %}
+		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-super-sink.jpg" "Graph of Amsterdam (super sink)" %}{% raw %}
 	</div>
 	<div class="col-md-4">
 		<p><strong>Figure C:</strong> The super source and super sink in one graph</p>
-		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-super-source-and-sink.jpg" %}{% raw %}
+		{% endraw %}{% customlightbox "geojson-to-graph" "amsterdam-super-source-and-sink.jpg" "Graph of Amsterdam (super source and sink )" %}{% raw %}
 	</div>
 </div>
 {% endraw %}
