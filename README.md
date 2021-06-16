@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://finnwea.com/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/custom/source/favicon.png" alt="Logo Blog Tijme" /></a>
+    <a href="https://tij.me/"><img src="https://raw.githubusercontent.com/tijme/blog/master/themes/custom/source/tulip.svg" alt="Logo Blog Tijme" width="200"  /></a>
     <br/>
     <br/>
     <a href="https://github.com/tijme/blog/blob/master/LICENSE.md"><img src="https://raw.finnwea.com/shield/?firstText=License&secondText=MIT" /></a>
@@ -7,7 +7,7 @@
     <br/>
     <b>My blog about cyber security, hacking, software engineering and much more</b>
     <br/>
-    <sub>Donate via <a href="https://www.paypal.me/tijmegommers/5">PayPal</a> – Built with ❤︎ by <a href="https://twitter.com/finnwea">Tijme Gommers</a></sub>
+    <sup>Built by <a href="https://www.linkedin.com/in/tijme/">Tijme Gommers</a> – Buy me a coffee via <a href="https://www.paypal.me/tijmegommers">PayPal</a>
     <br/>
     <br/>
 </p>
