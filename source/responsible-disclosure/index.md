@@ -11,7 +11,7 @@ robots: index, follow
 We consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present. If you discover a security vulnerability, we would like to know about it so we can take steps to address it as quickly as possible. We would like to ask you to help us better protect our clients and our systems.
 
 **Please do the following:**
-* E-mail your findings to t[dot]gommers[at]outlook[dot]com,
+* E-mail your findings to t{{dot}}gommers{{plus}}blog{{at}}outlook{{dot}}com,
 * Do not take advantage of the vulnerability or problem you have discovered, for example by downloading more data than necessary to demonstrate the vulnerability or deleting or modifying other people's data,
 * Do not reveal the problem to others until it has been resolved,
 * Do not use attacks on physical security, social engineering, distributed denial of service, spam or applications of third parties, and
