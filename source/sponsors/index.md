@@ -34,7 +34,7 @@ I make the majority of my software available to the public and make sure it is *
 			</tr>
 			<tr>
 				<td>Roberto</td>
-				<td>Alfieri (<a href="https://github.com/rebtoor" target="_blank" rel="noopener nofollow">link</a>)</td>
+				<td>GitHub (<a href="https://github.com/rebtoor" target="_blank" rel="noopener nofollow">link</a>)</td>
 				<td><a href="https://rebtoor.com/" target="_blank" rel="noopener nofollow">rebtoor.com</a></td>
 			</tr>
 		</tbody>
