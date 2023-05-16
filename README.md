@@ -11,6 +11,8 @@
     <br/>
     <br/>
 </p>
+    
+> **Warning**: This repository has been deprecated in favour of [github.com/tijme/blog-v2](https://github.com/tijme/blog-v2).
 
 ## Installation
 
